@@ -43,6 +43,13 @@ window.$j = {
 		this.msgs = {};
 		this.msg_index = 0;
 		
+		// forms collector
+		this.slideshows = {};
+		
+		// crontab
+		this.crontab = {};
+		this.crontab_index = 0;
+		
 		// init dom components when ready
 		$(document).ready(function() {
 			$j.init_dom();
@@ -98,7 +105,35 @@ window.$j = {
 			sticky:1
 		});
 		
-	}
+	},
+	
+	cron: function (fn,seconds,id) {
+		
+		if(id) {
+			var cron_id = id;
+		} else {
+			var cron_id = this.crontab_index;
+			this.crontab_index++;
+		}
+
+		// entry
+    	var entry = {
+    		
+    	 	created: new Date(),
+    	 	
+      		stop: function () {    
+      			clearTimeout(this.timer); 
+      		},
+      		
+      		timer: setInterval(function () { 
+      			fn(entry);    
+      		}, seconds)
+      		
+    	};
+    	
+    	this.crontab[cron_id] = entry;
+    
+    }
 	
 };
 

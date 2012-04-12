@@ -92,11 +92,11 @@
 /* Slideshow 
 ----------------------------------------------------------- */
 
-.slideshow-container {
+.jive-slideshow {
 	position:relative;
 }
 
-.slideshow-container .slide {
+.jive-slideshow .slide {
 	position:absolute;
 	top:0px;
 	left:0px;

@@ -6,33 +6,74 @@
         
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         
-        <title>jive js</title>
+        <title>jive js | the less is more library</title>
         
         <link rel="stylesheet" type="text/css" href="jive.css" />
+        <link href='http://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet' type='text/css'>
         
         <script type="text/javascript" src="jquery.1.7.1.min.js"></script>
         <script type="text/javascript" src="lib/oop.js"></script>
         <script type="text/javascript" src="jive.js"></script>
         <script type="text/javascript" src="lib/canopy.js"></script>
-      <!--  <script type="text/javascript" src="ext/three.js"></script>
+        <script type="text/javascript" src="lib/slideshow.js"></script>
+      	<!-- <script type="text/javascript" src="ext/three.js"></script>
         <script type="text/javascript" src="ext/starfield.js"></script>-->
         
         <style type="text/css">
+		
 			body {
-				background-color: #000000;
+				background-color: #EEE;
 				margin: 0px;
 				overflow: hidden;
 			}
+
+			#jive-header { 
+				  color: #3A92C2;
+				  font-family: 'Parisienne',cursive;
+				  font-size: 140px;
+				  position: absolute;
+				  right: 200px;
+				
+			}
+			
+			#jive-header p {
+				color: #666666;
+			    font-family: Arial;
+			    font-size: 12px;
+			    font-weight: normal;
+			    position: absolute;
+			    right: 0;
+			    top: 130px;
+			}
+	
 		</style>
         
 	 </head>
 	 
 	<body>
 		
-		<div style="position:absolute;top:0px;left:0px;right:0px;bottom:0px;overflow:hidden;z-index:1;" id="container"></div>
-		<div style="position:absolute;z-index:2;font-size:500%;color:#f00baa;" id="test">jive</div>
-	
+		<h1 id="jive-header">jive <p>the less is more ui</p></h1>
 		
+		<div id="test_slideshow" class="jive-slideshow">
+			
+			<div class="slide">Max 1</div>
+			<div class="slide">Max 2</div>
+			
+		</div>
+		
+		<!--<div id="test_slideshow2" class="jive-slideshow">
+			
+			<div class="slide">Max 1</div>
+			<div class="slide">Max 2</div>
+			
+		</div>
+		
+		<div id="test_slideshow4" class="jive-slideshow">
+			
+			<div class="slide">Max 1</div>
+			<div class="slide">Max 2</div>
+			
+		</div>-->
 		
 	</body>
 	
