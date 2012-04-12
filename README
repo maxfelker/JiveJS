@@ -1,15 +1,10 @@
-Less is more
------------------------------------------
-jive wants you to write as little Javascript as possible. Why manage blocks of JS at the bottom every page when an intelligent library can take care of everything for you? jive aims to put the focus on your application's goals, not your Javascript.
+jive | the less is more library
 
-Write HTML & CSS, let jive do the rest
------------------------------------------
-Use standard HTML & CSS practices to create rich, object oriented UI components without writing a single line of JS.
+Installation
+--------------------------
+1) Obtain source files from https://github.com/maxatbrs/JiveJS
+2) Move them into your project folder
+3) Include them in your web document's head
+4) Enjoy!
 
-Global Component Access
------------------------------------------
-Forget assigning variables and remembering them: jive collects all UI components and stores them in the global object. This means being able to access components anywhere you want, without having to worry about scope or naming conflicts.
-
-Use objects to configure components
------------------------------------------
-All components accept a configuration object upon being instantiated, each follow a similar structure. This means no more remembering parameter orders and type
+~ Max
