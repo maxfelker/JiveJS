@@ -1,0 +1,10 @@
+// ==ClosureCompiler==
+// @compilation_level SIMPLE_OPTIMIZATIONS
+// @output_file_name jive.js
+// @code_url https://raw.github.com/maxatbrs/JiveJS/master/lib/oop.js
+// @code_url https://raw.github.com/maxatbrs/JiveJS/master/jive.js
+// @code_url https://raw.github.com/maxatbrs/JiveJS/master/lib/canopy.js
+// @code_url https://raw.github.com/maxatbrs/JiveJS/master/lib/msg.js
+// @code_url https://raw.github.com/maxatbrs/JiveJS/master/lib/tabs.js
+// @code_url https://raw.github.com/maxatbrs/JiveJS/master/lib/form.js
+// ==/ClosureCompiler==
