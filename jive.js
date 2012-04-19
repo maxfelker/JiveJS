@@ -84,7 +84,7 @@ window.$j = {
 		
 		$j.viewport = {
 			x: $(window).width(),
-			y: $(window).height(),
+			y: $(window).height()
 		};
 		
 	},
