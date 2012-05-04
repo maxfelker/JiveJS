@@ -34,26 +34,29 @@ window.$j = {
 	init: function(config) {
 		
 		// tabs collector
-		this.tabs = {};
+		this.tabs = {}
 		
 		// forms collector
-		this.forms = {};
+		this.forms = {}
 		
 		// messages collector
-		this.msgs = {};
-		this.msg_index = 0;
+		this.msgs = {}
+		this.msg_index = 0
 		
 		// forms collector
-		this.slideshows = {};
+		this.slideshows = {}
+		
+		//dropdowns
+		this.dropdowns = {}
 		
 		// crontab
-		this.crontab = {};
-		this.crontab_index = 0;
+		this.crontab = {}
+		this.crontab_index = 0
 		
 		// init dom components when ready
 		$(document).ready(function() {
-			$j.init_dom();
-		});
+			$j.init_dom()
+		})
 		
 	},
 	

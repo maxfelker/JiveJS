@@ -14,17 +14,26 @@
         <script type="text/javascript" src="jquery.1.7.1.min.js"></script>
         <script type="text/javascript" src="lib/oop.js"></script>
         <script type="text/javascript" src="jive.js"></script>
-        <script type="text/javascript" src="lib/canopy.js"></script>
-        <script type="text/javascript" src="lib/slideshow.js"></script>
-      	<!-- <script type="text/javascript" src="ext/three.js"></script>
-        <script type="text/javascript" src="ext/starfield.js"></script>-->
+        <script type="text/javascript" src="lib/dropdown.js"></script>
         
+        <!-- Minified 
+        <script type="text/javascript" src="jive.min.js"></script>
+        -->
+      	
+      	<!-- Ext 
+      	<script type="text/javascript" src="ext/three.js"></script>
+        <script type="text/javascript" src="ext/starfield.js"></script>
+        --> 
+       
         <style type="text/css">
 		
 			body {
 				background-color: #EEE;
 				margin: 0px;
 				overflow: hidden;
+				font-family:Arial;
+				font-size:0.8em;
+				color:#333;
 			}
 
 			#jive-header { 
@@ -32,7 +41,8 @@
 				  font-family: 'Parisienne',cursive;
 				  font-size: 140px;
 				  position: absolute;
-				  right: 200px;
+				  right: 10%;
+				  top:0%;
 				
 			}
 			
@@ -45,6 +55,18 @@
 			    right: 0;
 			    top: 130px;
 			}
+			
+			#about-container {
+				position: absolute;
+				left: 10%;
+				top:10%;
+				width:50%;
+			}
+			
+			h3 {
+				color: #3A92C2;
+				
+			}
 	
 		</style>
         
@@ -52,16 +74,70 @@
 	 
 	<body>
 		
+		<!-- Start Dropdown Block -->
+		
+		<div id="my-dropdown" class="dropdown">
+			
+			<a href="#">Parent Item</a>
+			
+			<div class="dropdown-menu" style="display:none;">
+				
+				<a href="#">Child Item</a>
+				<a href="#">Child Item</a>
+				
+				<span id="my-sub-dropdown" class="dropdown" href="#">
+					
+					<a href="#">Sub Dropdown Parent</a>
+					
+					<div class="dropdown-menu" style="display:none;">
+				
+						<a href="#">Child Item</a>
+						<a href="#">Child Item</a>
+						
+					</div>
+					
+				
+				</span>
+				
+			</div>	
+			
+		</div>
+		
+		<!-- End Dropdown Block -->
+		
 		<h1 id="jive-header">jive <p>the less is more ui</p></h1>
 		
-		<div id="test_slideshow" class="jive-slideshow">
+		<div id="about-container">
+			
+				<h3>Less is more</h3>
+
+				<p><strong>Jive</strong> wants you to write as little Javascript as possible. Why manage blocks of JS at the bottom every page when an intelligent library can take care of everything for you? <strong>Jive</strong> aims to put the focus on your application's goals, not your Javascript.</p>
+				
+				<h3>Write HTML &amp; CSS, let Jive do the rest</h3>
+				
+				<p>Use standard HTML &amp; CSS practices to create rich, object oriented UI components without writing a single line of JS.</p>
+				
+				<h3>Global Component Access</h3>
+				
+				<p>Forget assigning variables and remembering them: <strong>Jive</strong> collects all UI components and stores them in the global object. This means being able to access components anywhere you want, without having to worry about scope or naming conflicts.</p>
+				
+				<h3>Use objects to configure components</h3>
+				
+				<p>All components accept a configuration object upon being instantiated, each follow a similar structure. This means no more remembering parameter orders and type</p>
+				
+				<h3>
+				<a href="https://github.com/maxatbrs/JiveJS/wiki/Getting-Started">Getting Started</a> has never been so easy!</h3>
+
+		</div>
+		
+		<!--<div id="test_slideshow" class="jive-slideshow">
 			
 			<div class="slide">Max 1</div>
 			<div class="slide">Max 2</div>
 			
 		</div>
 		
-		<!--<div id="test_slideshow2" class="jive-slideshow">
+		<div id="test_slideshow2" class="jive-slideshow">
 			
 			<div class="slide">Max 1</div>
 			<div class="slide">Max 2</div>
