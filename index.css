@@ -1,0 +1,80 @@
+/*
+ * Index CSS
+ * Used for the index page
+*/
+
+body {
+	background-color: #EEE;
+	margin: 0px;
+	overflow: hidden;
+	font-family:Arial;
+	font-size:0.8em;
+	color:#333;
+}
+
+#jive-header { 
+	  color: #3A92C2;
+	  font-family: 'Parisienne',cursive;
+	  font-size: 140px;
+	  position: absolute;
+	  right: 10%;
+	  top:0%;
+	
+}
+
+#jive-header p {
+	color: #666666;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: normal;
+    position: absolute;
+    right: 0;
+    top: 130px;
+}
+
+#about-container {
+	position: absolute;
+	left: 10%;
+	top:10%;
+	width:50%;
+}
+
+h3 {
+	color: #3A92C2;
+	
+}
+
+/* custom nav */
+#nav {
+	position:fixed;
+	left:0px;
+	right:0px;
+	top:0px;
+	padding:1%;
+	background:#222;
+	border-bottom:1px solid #FFF;
+	z-index:1;
+}
+
+#nav a {
+	color:#FFF;
+	text-decoration:none;
+	
+}
+
+
+#nav .dropdown-menu {
+	margin-top:10px;
+}
+
+#nav .dropdown-menu a{
+	display:block;
+	padding:10px;
+}
+
+/* -- custom popup -- */
+
+.popup {
+	background:#FFF;
+	border:1px solid #F00baa;
+}

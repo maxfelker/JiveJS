@@ -8,13 +8,15 @@
         
         <title>jive js | the less is more library</title>
         
-        <link rel="stylesheet" type="text/css" href="jive.css" />
+        
         <link href='http://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet' type='text/css'>
         
+        <!-- Jive JS -->
         <script type="text/javascript" src="jquery.1.7.1.min.js"></script>
         <script type="text/javascript" src="lib/oop.js"></script>
         <script type="text/javascript" src="jive.js"></script>
         <script type="text/javascript" src="lib/dropdown.js"></script>
+        <script type="text/javascript" src="lib/popup.js"></script>
         
         <!-- Minified 
         <script type="text/javascript" src="jive.min.js"></script>
@@ -24,51 +26,12 @@
       	<script type="text/javascript" src="ext/three.js"></script>
         <script type="text/javascript" src="ext/starfield.js"></script>
         --> 
+        
+        <!-- Jive CSS -->
+        <link rel="stylesheet" type="text/css" href="jive.css" />
        
-        <style type="text/css">
-		
-			body {
-				background-color: #EEE;
-				margin: 0px;
-				overflow: hidden;
-				font-family:Arial;
-				font-size:0.8em;
-				color:#333;
-			}
-
-			#jive-header { 
-				  color: #3A92C2;
-				  font-family: 'Parisienne',cursive;
-				  font-size: 140px;
-				  position: absolute;
-				  right: 10%;
-				  top:0%;
-				
-			}
-			
-			#jive-header p {
-				color: #666666;
-			    font-family: Arial;
-			    font-size: 12px;
-			    font-weight: normal;
-			    position: absolute;
-			    right: 0;
-			    top: 130px;
-			}
-			
-			#about-container {
-				position: absolute;
-				left: 10%;
-				top:10%;
-				width:50%;
-			}
-			
-			h3 {
-				color: #3A92C2;
-				
-			}
-	
-		</style>
+   		<!-- Styles for this Page -->
+        <link rel="stylesheet" type="text/css" href="index.css" />
         
 	 </head>
 	 
@@ -76,32 +39,42 @@
 		
 		<!-- Start Dropdown Block -->
 		
-		<div id="my-dropdown" class="dropdown">
+		<div id="nav">
 			
-			<a href="#">Parent Item</a>
+			<div id="about" class="dropdown">
 			
-			<div class="dropdown-menu" style="display:none;">
+				<a href="#">About Jive JS</a>
 				
-				<a href="#">Child Item</a>
-				<a href="#">Child Item</a>
-				
-				<span id="my-sub-dropdown" class="dropdown" href="#">
+				<div class="dropdown-menu" style="display:none;">
 					
-					<a href="#">Sub Dropdown Parent</a>
-					
-					<div class="dropdown-menu" style="display:none;">
+					<a href="#">Child Item</a>
+					<a href="#">Child Item</a>
+	
+				</div>	
 				
-						<a href="#">Child Item</a>
-						<a href="#">Child Item</a>
+			</div>
+			
+			<div id="docs" class="dropdown">
+			
+				<a href="#">Documentaion</a>
+				
+				<div class="dropdown-menu" style="display:none;">
+					
+					<a href="#">Child Item</a>
+					<a href="#">Child Item</a>
+					<a href="#">Child Item</a>
+					<a href="#">Child Item</a>	
+					<a href="#">Child Item</a>
+					<a href="#">Child Item</a>
 						
-					</div>
-					
+				</div>	
 				
-				</span>
-				
-			</div>	
+			</div>
+			
 			
 		</div>
+				
+		
 		
 		<!-- End Dropdown Block -->
 		

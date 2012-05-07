@@ -6,7 +6,7 @@
 	 _\ \ \ \_\ \___/\ \____\
 	/\ \_\ \/_/\/__/  \/____/
 	\ \____/                 
-	 \/___/              v0.2
+	 \/___/              
     
     The less is more UI library
     By Max Felker
@@ -34,29 +34,33 @@ window.$j = {
 	init: function(config) {
 		
 		// tabs collector
-		this.tabs = {}
+		this.tabs = {};
 		
 		// forms collector
-		this.forms = {}
+		this.forms = {};
 		
 		// messages collector
-		this.msgs = {}
-		this.msg_index = 0
+		this.msgs = {};
+		this.msg_index = 0;
 		
 		// forms collector
-		this.slideshows = {}
+		this.slideshows = {};
 		
 		//dropdowns
-		this.dropdowns = {}
+		this.dropdowns = {};
+		
+		//popups
+		this.popups = {};
+		this.popup_index = 0;
 		
 		// crontab
-		this.crontab = {}
-		this.crontab_index = 0
+		this.crontab = {};
+		this.crontab_index = 0;
 		
 		// init dom components when ready
 		$(document).ready(function() {
-			$j.init_dom()
-		})
+			$j.init_dom();
+		});
 		
 	},
 	
@@ -140,4 +144,5 @@ window.$j = {
 	
 };
 
+// initalize jive
 $j.init();
