@@ -9,7 +9,6 @@
 	 \/___/              
     
     The less is more UI library
-    By Max Felker
 	 
 */   
 
@@ -89,6 +88,7 @@ window.$j = {
 	// store viewport dimensions
 	get_viewport_dimensions: function() {
 		
+		// store viewport values
 		$j.viewport = {
 			x: $(window).width(),
 			y: $(window).height()
@@ -114,30 +114,31 @@ window.$j = {
 		
 	},
 	
+	// add an entry into crontab
 	cron: function (fn,seconds,id) {
-		
-		if(id) {
-			var cron_id = id;
-		} else {
-			var cron_id = this.crontab_index;
-			this.crontab_index++;
-		}
+
+		// set cron id
+		var cron_id = id ? id : this.crontab_index++; 
 
 		// entry
     	var entry = {
     		
+    		// timsetamp
     	 	created: new Date(),
     	 	
+    	 	// stop function
       		stop: function () {    
       			clearTimeout(this.timer); 
       		},
       		
+      		// timer
       		timer: setInterval(function () { 
       			fn(entry);    
       		}, seconds)
       		
     	};
     	
+    	// set the entry and away we go!
     	this.crontab[cron_id] = entry;
     
     }
