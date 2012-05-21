@@ -85,12 +85,24 @@
 .popup {
 	position:absolute;
 	z-index:99999;
+	padding:0px;
+	border-radius: 10px;
+	background:#FFF;
+	box-shadow:0px 0px 10px #222;
 }
 
-.popup .popup-toolbar { }
+.popup .popup-toolbar { 
+	padding:20px;
+	border-radius:10px 10px 0px 0px;
+	background:#eee;
+	border-bottom:1px solid #CCC;
+}
 
-.popup .popup-toolbar .popup-close { }
-
+.popup .popup-toolbar .popup-close { 
+	position:absolute;
+	right:20px;
+	top:20px;
+}
 
 /* Modal & Loader
 ----------------------------------------------------------- */

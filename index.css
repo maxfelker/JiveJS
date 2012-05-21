@@ -71,10 +71,3 @@ h3 {
 	display:block;
 	padding:10px;
 }
-
-/* -- custom popup -- */
-
-.popup {
-	background:#FFF;
-	border:1px solid #F00baa;
-}
