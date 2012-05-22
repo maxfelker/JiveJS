@@ -1,10 +1,28 @@
-jive | the less is more library
+	 __  __                  
+	/\_\/\_\  __  __    __   
+	\/\ \/\ \/\ \/\ \ /'__`\ 
+	 \ \ \ \ \ \ \_/ |\  __/ 
+	 _\ \ \ \_\ \___/\ \____\
+	/\ \_\ \/_/\/__/  \/____/
+	\ \____/                 
+	 \/___/              
+    
+    The less is more UI library / Released under WTFPL 2.0 (See LICENSE)
 
-Installation
---------------------------
-1) Obtain source files from https://github.com/maxatbrs/JiveJS
-2) Move them into your project folder
-3) Include them in your web document's head
-4) Enjoy!
+# Getting Started
 
-~ Max
+1) Download the source code
+2) Include the Javascript and CSS dependencies in the head of your web document.
+
+<!-- Jive CSS-->
+<link rel="stylesheet" href="/path_to_css/jive.css" type="text/css" />
+
+<!-- Jive JS-->
+<script type="text/javascript" src="/path_to_js/jquery.1.7.1.min.js"></script>
+<script type="text/javascript" src="/path_to_js/jive.min.js"></script>
+
+# Source 
+https://github.com/maxatbrs/JiveJS
+
+# Project Tracking
+https://www.pivotaltracker.com/projects/540025
