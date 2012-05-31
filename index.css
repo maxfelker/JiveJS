@@ -30,6 +30,7 @@ body {
     position: absolute;
     right: 0;
     top: 130px;
+	width:120px;
 }
 
 #about-container {
