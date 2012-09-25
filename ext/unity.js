@@ -71,7 +71,7 @@ var UnityPlayer = Class.create({
 	call: function(options) {
 		
 		this.get().SendMessage(
-			( options.gameobject ? options.gameobject : 'Jive' ), 
+			options.gameobject, 
 			options.fn, 
 			options.params
 		)
