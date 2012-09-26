@@ -6,34 +6,16 @@
         
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         
-        <title>jive js | the less is more library</title>
-        
+        <title>jive js | the less is more jquery ui</title>
         
         <link href='http://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet' type='text/css'>
         
         <!-- Jive JS -->
         <script type="text/javascript" src="jquery.1.7.1.min.js?20120524"></script>
        
-      	<!-- Dev Src	
-      	<script type="text/javascript" src="lib/drag.js"></script>	
-        <script type="text/javascript" src="lib/oop.js"></script>
-        <script type="text/javascript" src="jive.js"></script>
-        <script type="text/javascript" src="lib/dropdown.js"></script>
-        <script type="text/javascript" src="lib/popup.js"></script>
-        <script type="text/javascript" src="lib/canopy.js"></script>
-        <script type="text/javascript" src="lib/modal.js"></script>
-        <script type="text/javascript" src="lib/form.js"></script>
-        <script type="text/javascript" src="lib/tabs.js"></script>
-        -->
-       	
         <!-- Minified -->
         <script type="text/javascript" src="jive.min.js?20120925"></script>
       	
-      	<!-- Ext 
-      	<script type="text/javascript" src="ext/three.js"></script>
-        <script type="text/javascript" src="ext/starfield.js"></script>
-        --> 
-        
         <!-- Jive CSS -->
         <link rel="stylesheet" type="text/css" href="jive.css" />
        
@@ -44,7 +26,7 @@
 	 
 	<body>
 		
-		<!-- Start Dropdown Block -->
+		<!-- Start Dropdown Block 
 		
 		<div id="nav">
 			
@@ -79,18 +61,24 @@
 			</div>
 			
 			
-		</div>
+		</div>-->
 				
 		
 		
 		<!-- End Dropdown Block -->
 		
-		<h1 id="jive-header" class="drag">jive <p>the less [ than 16KB ] is more ui</p></h1>
+		<h1 id="jive-header" class="drag">jive <p>the less is more jquery ui</p></h1>
 		
-		<div id="about-container">
-						
-				<h3>Less is more</h3>
-
+		<div id="about-container" class="jive-tabs">
+			
+			<div id="tab-welcome" class="tab">Welcome</div>
+			
+			<div id="tab-features" class="tab">Features</div>
+			
+			<div id="panel-welcome" class="panel">
+										
+				<h1>Less is more</h1>
+				
 				<p><strong>Jive</strong> wants you to write as little Javascript as possible. Why manage blocks of JS at the bottom every page when an intelligent library can take care of everything for you? <strong>Jive</strong> aims to put the focus on your application's goals, not your Javascript.</p>
 				
 				<h3>Write HTML &amp; CSS, let Jive do the rest</h3>
@@ -108,28 +96,36 @@
 				<h3>
 				<a href="https://github.com/maxatbrs/JiveJS/wiki/Getting-Started">Getting Started</a> has never been so easy!</h3>
 
+			</div>
+			
+			<div id="panel-features" class="panel">
+										
+				<h1>So many features!</h1>
+				
+				<form id="loginForm" name="loginForm" class="jive-form" action="log_me_in.php">
+
+				    Username: <input type="text" name="username" class="valid-empty"/><br/>
+				    LastName: <input type="text" name="password" class="valid-empty"/><br/>
+				
+				    <input type="submit" name="myform-submit" value="Login" />
+				
+				</form>
+				
+				<h2>Slideshows are cool!</h2>
+				
+				<div id="testSlideshow" class="jive-slideshow autostart">
+			
+					<div class="slide">Slide 1</div>
+					<div class="slide">Slide 2</div>
+					
+				</div> 
+	
 		</div>
 		
-		<!--<div id="test_slideshow" class="jive-slideshow">
-			
-			<div class="slide">Max 1</div>
-			<div class="slide">Max 2</div>
-			
-		</div>
 		
-		<div id="test_slideshow2" class="jive-slideshow">
-			
-			<div class="slide">Max 1</div>
-			<div class="slide">Max 2</div>
-			
-		</div>
+	</div>
 		
-		<div id="test_slideshow4" class="jive-slideshow">
-			
-			<div class="slide">Max 1</div>
-			<div class="slide">Max 2</div>
-			
-		</div>-->
+		
 		
 	</body>
 	

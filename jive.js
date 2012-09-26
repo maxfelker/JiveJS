@@ -16,7 +16,7 @@ window.$j = {
 
 	// regexp object
 	regex: {
-		empty: /^.*$/,
+		empty: "",
 		bit: /^(0|1)$/, 
 		num: /^-?([0-9]*)$/,
 		alpha: /^[a-zA-z\s]+$/,
