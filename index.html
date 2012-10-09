@@ -15,6 +15,8 @@
        
         <!-- Minified -->
         <script type="text/javascript" src="jive.min.js?20120925"></script>
+      	<script type="text/javascript" src="lib/form.js"></script>
+      	
       	
         <!-- Jive CSS -->
         <link rel="stylesheet" type="text/css" href="jive.css" />
@@ -102,7 +104,7 @@
 										
 				<h1>So many features!</h1>
 				
-				<form id="loginForm" name="loginForm" class="jive-form" action="log_me_in.php">
+				<form id="loginForm" name="loginForm" class="jive-form" method="post" action="log_me_in.php">
 
 				    Username: <input type="text" name="username" class="valid-empty"/><br/>
 				    LastName: <input type="text" name="password" class="valid-empty"/><br/>
@@ -110,6 +112,20 @@
 				    <input type="submit" name="myform-submit" value="Login" />
 				
 				</form>
+				
+				<script type="text/javascript">
+					
+					$(window).load(function () {
+						
+						$j.forms.loginForm.success(function(form) {
+						
+							alert(form.ajax_url);
+						
+						});
+ 
+					});
+					
+				</script>
 				
 				<h2>Slideshows are cool!</h2>
 				

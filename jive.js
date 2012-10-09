@@ -56,6 +56,9 @@ window.$j = {
 		this.crontab = {};
 		this.crontab_index = 0;
 		
+		// get the time
+		this.cron(this.get_time,1000,"jiveTime");
+		
 		// init dom components when ready
 		$(document).ready(function() {
 			$j.init_dom();
@@ -141,6 +144,28 @@ window.$j = {
     	// set the entry and away we go!
     	this.crontab[cron_id] = entry;
     
+    },
+    
+    // generates the time propetry for jive
+    get_time: function() {
+    	
+		var date = new Date();
+		
+    	$j.time = {
+			hours: date.getHours(),
+			mins: date.getMinutes(),
+			secs: date.getSeconds(),
+			time_of_day: "am"
+		};
+		
+		($j.time.mins<10) ? $j.time.mins = "0" + $j.time.mins : $j.time.mins = $j.time.mins;
+        ($j.time.secs<10) ? $j.time.secs ="0" + $j.time.secs :  $j.time.secs = $j.time.secs;
+        
+        if($j.time.hours > 12) {
+        	$j.time.hours = $j.time.hours - 12;
+        	$j.time.time_of_day = "pm";
+        }
+
     }
 	
 };
