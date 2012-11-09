@@ -1,23 +1,15 @@
-/*
-	 __  __                  
-	/\_\/\_\  __  __    __   
-	\/\ \/\ \/\ \/\ \ /'__`\ 
-	 \ \ \ \ \ \ \_/ |\  __/ 
-	 _\ \ \ \_\ \___/\ \____\
-	/\ \_\ \/_/\/__/  \/____/
-	\ \____/                 
-	 \/___/              
-    
-    The less is more UI library
-	 
-*/   
+/**
+ * JiveJS
+ * the "less is more" jQuery UI library
+ * @author Max Felker (http://maxfelker.com) (@maxfelker)
+ */
 
 window.$j = {
 
 	// regexp object
 	regex: {
 		empty: "",
-		bit: /^(0|1)$/, 
+		bit: /^(0|1)$/,
 		num: /^-?([0-9]*)$/,
 		alpha: /^[a-zA-z\s]+$/,
 		alphanum:  /^[a-zA-Z0-9]?[\s||\'||\"||\.||\?||\!||\-||a-zA-Z0-9]+$/,
@@ -28,146 +20,145 @@ window.$j = {
 		decimal: /^\d+\.\d{0,4}$/,
 		price: /^\$?\s?[0-9\,]+(\.\d{0,4})?$/
 	},
-	
+
 	// initialization method
 	init: function(config) {
-		
+
 		// tabs collector
 		this.tabs = {};
-		
+
 		// forms collector
 		this.forms = {};
-		
+
 		// messages collector
 		this.msgs = {};
 		this.msg_index = 0;
-		
-		// forms collector
+
+		// slideshows collector
 		this.slideshows = {};
-		
-		//dropdowns
+
+		// dropdowns collector
 		this.dropdowns = {};
-		
-		//popups
+
+		// popups collector
 		this.popups = {};
 		this.popup_index = 0;
-		
-		// crontab
+
+		// crontab collector
 		this.crontab = {};
 		this.crontab_index = 0;
-		
-		// get the time
-		this.cron(this.get_time,1000,"jiveTime");
-		
-		// init dom components when ready
+
+		// gets the time
+		this.cron(this.get_time, 1000, "jiveTime");
+
+		// initializes dom components when ready
 		$(document).ready(function() {
 			$j.init_dom();
 		});
-		
+
 	},
-	
+
 	// intializes dom elements and functions
-	init_dom:function() {
-		
-		// when the mouse moves, store it's position
+	init_dom: function() {
+
+		// when mouse moves, store its position
 		$(document).mousemove(this.get_mouse_position);
-		
-		// when window is load or resized, store viewport dimensions
+
+		// when window is loaded or resized, store viewport dimensions
 		this.get_viewport_dimensions();
-		$(window).resize(this.get_viewport_dimensions);	
-		
+		$(window).resize(this.get_viewport_dimensions);
+
 	},
-	
-	// stores mouse x / y position
+
+	// gets position of mouse
 	get_mouse_position: function(e) {
-		
+
+		// stores mouse x and y positions
 		$j.mouse = {
 			x: e.pageX,
 			y: e.pageY
 		};
-				
+
 	},
-	
-	// store viewport dimensions
+
+	// gets viewport dimensions
 	get_viewport_dimensions: function() {
-		
-		// store viewport values
+
+		// stores viewport width and height
 		$j.viewport = {
 			x: $(window).width(),
 			y: $(window).height()
 		};
-		
+
 	},
-	
+
 	// wrapper function for messenger.create()
-	msg:function(config) {
-		
+	msg: function(config) {
 		this.messenger.create(config);
-		
 	},
-	
-	// hello word example
+
+	// "Hello World!" example
 	hello_world: function() {
-		
+
 		this.msg({
-			type:'success',
-			content:"<h2>Hello World!</h2><p>If you're seeing this message, it means jive is ready to use!</p>",
-			sticky:1
+			type: 'success',
+			content: "<h2>Hello World!</h2><p>If you're seeing this message, it means jive is ready to use!</p>",
+			sticky: 1
 		});
-		
+
 	},
-	
-	// add an entry into crontab
+
+	// adds an entry into crontab
 	cron: function (fn,seconds,id) {
 
-		// set cron id
-		var cron_id = id ? id : this.crontab_index++; 
+		// sets cron_id
+		var cron_id = id ? id : this.crontab_index++;
 
 		// entry
     	var entry = {
-    		
-    		// timsetamp
+    		// timestamp
     	 	created: new Date(),
-    	 	
-    	 	// stop function
-      		stop: function () {    
-      			clearTimeout(this.timer); 
+
+    	 	// stops entry
+      		stop: function () {
+      			clearTimeout(this.timer);
       		},
-      		
-      		// timer
-      		timer: setInterval(function () { 
-      			fn(entry);    
+
+      		// entry timer
+      		timer: setInterval(function () {
+      			fn(entry);
       		}, seconds)
-      		
     	};
-    	
-    	// set the entry and away we go!
+
+    	// sets entry, and away we go!
     	this.crontab[cron_id] = entry;
-    
+
     },
-    
-    // generates the time propetry for jive
+
+    // generates the time propetry
     get_time: function() {
-    	
+
+		// sets date
 		var date = new Date();
-		
+
+		// stores time
     	$j.time = {
 			hours: date.getHours(),
 			mins: date.getMinutes(),
 			secs: date.getSeconds(),
 			time_of_day: "am"
 		};
-		
+
 		($j.time.mins<10) ? $j.time.mins = "0" + $j.time.mins : $j.time.mins = $j.time.mins;
         ($j.time.secs<10) ? $j.time.secs ="0" + $j.time.secs :  $j.time.secs = $j.time.secs;
-        
+
         if($j.time.hours > 12) {
         	$j.time.hours = $j.time.hours - 12;
         	$j.time.time_of_day = "pm";
         }
 
     }
-	
+
 };
 
 // initalize jive
