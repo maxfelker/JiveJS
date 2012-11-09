@@ -1,22 +1,22 @@
-gus
+jive js - the less is more ui library
 ===
 
-The web app kickstarter
+# Getting Started
+ 
+The first thing you'll need to do is download the source code. Once you have this, include the Javascript and CSS dependencies in the head of your web document.
 
-# TL;DR
-Prototyping web apps sucks, needed to roll out web 
-apps like a boss.
+<!-- Jive CSS-->
+<link rel="stylesheet" href="/path_to_css/jive.css" type="text/css" />
 
-# So whats the big deal?
+<!-- Jive JS-->
+<script type="text/javascript" src="/path_to_js/jquery.1.7.1.min.js"></script>
+<script type="text/javascript" src="/path_to_js/jive.min.js"></script>
 
-- PHP driven (as in the easiest way possible)
-- Templated with Twig
-- All  the whiz-bang js + css libs out there like bootstrap and modernizr
+## Hello World
 
-# Install Gus
+Now that you have the dependencies included, you'll can now access jive from anywhere in your code, just by using the $j variable. Below is a very basic example:
 
-- Get source
-- Update $config['app_root'] values to match your server's absolute path for the application application
-- Rage n3wbs
-
-move to come <3
+<script type="text/javascript">
+    // say hello!
+    $j.hello_world()
+</script>
