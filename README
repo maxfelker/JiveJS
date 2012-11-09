@@ -1,15 +1,8 @@
- __  __                  
-/\_\/\_\  __  __    __   
-\/\ \/\ \/\ \/\ \ /'__`\ 
- \ \ \ \ \ \ \_/ |\  __/ 
- _\ \ \ \_\ \___/\ \____\
-/\ \_\ \/_/\/__/  \/____/
-\ \____/                 
- \/___/              
-    
-The less is more UI library
+jive js - the less is more UI library
+=====================================
 
-# Getting Started
+Getting Started
+---------------
 
 1) Download the source code
 2) Include the Javascript and CSS dependencies in the head of your web document.
