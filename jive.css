@@ -127,6 +127,10 @@
 	background: #bbb;
 }
 
+.popup .popup-contents {
+	padding:20px;
+}
+
 /*
  * JiveJS: Modals & Loaders
  */
