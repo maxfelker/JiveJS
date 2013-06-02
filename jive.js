@@ -25,7 +25,7 @@ window.$j = {
 	init: function(config) {
 
 		// tabs collector
-		this.tabs = {};
+		this.tabbed = {};
 
 		// forms collector
 		this.forms = {};

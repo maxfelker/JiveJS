@@ -6,7 +6,7 @@
         
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         
-        <title>jive js | the less is more jquery ui</title>
+        <title>JiveJS | Web UI Made Simple</title>
         
         <link href='http://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet' type='text/css'>
         
@@ -16,13 +16,14 @@
         <!-- Minified -->
         <script type="text/javascript" src="jive.min.js?20130215"></script>
       	
-      	<!-- Development Includes (uncomment these for dev) 
+      	<!-- Development Includes (uncomment these for dev) -->
       	<script type="text/javascript" src="jive.js"></script>
       	<script type="text/javascript" src="lib/oop.js"></script>
       	<script type="text/javascript" src="lib/canopy.js"></script>
       	<script type="text/javascript" src="lib/popup.js"></script>
       	<script type="text/javascript" src="lib/modal.js"></script> 
-      	<script type="text/javascript" src="lib/tabs.js"></script>-->
+      	<script type="text/javascript" src="lib/tabs.js"></script>
+      	<script type="text/javascript" src="lib/slideshow.js"></script>
       			
         <!-- Jive CSS -->
         <link rel="stylesheet" type="text/css" href="jive.css" />
@@ -32,95 +33,108 @@
         
 	 </head>
 	 
-	<body>
+	<body id="container" class="tabbed">
 		
-		<!-- Start Dropdown Block 
+		<!-- Start Dropdown Block -->
 		
-		<div id="nav">
-			
-			<div id="about" class="dropdown">
-			
-				<a href="#">About Jive JS</a>
-				
-				<div class="dropdown-menu" style="display:none;">
-					
-					<a href="#">Child Item</a>
-					<a href="#">Child Item</a>
+		<nav id="primary" class="dropdown">
 	
-				</div>	
-				
-			</div>
+			<a id="tab-lessismore" href="#lessismore" class="tab">JiveJS - Web UI Made Simple</a>
 			
-			<div id="docs" class="dropdown">
-			
-				<a href="#">Documentaion</a>
+			<nav class="dropdown-menu" style="display:none;">
 				
-				<div class="dropdown-menu" style="display:none;">
-					
-					<a href="#">Child Item</a>
-					<a href="#">Child Item</a>
-					<a href="#">Child Item</a>
-					<a href="#">Child Item</a>	
-					<a href="#">Child Item</a>
-					<a href="#">Child Item</a>
-						
-				</div>	
-				
-			</div>
+				<!-- Tabbed Navigation -->
 			
-			
-		</div>-->
-				
+				<a id="tab-features"  href="#features" class="tab">Features</a>
+
+			</nav>	
+
+		</nav>
 		
-		
+		<div id="contentContainer">
+				
 		<!-- End Dropdown Block -->
 		
-		<h1 id="jive-header" class="drag">jive <p>the less is more jquery ui</p></h1>
-		
-		<div id="about-container" class="jive-tabs">
+		<section id="panel-lessismore" class="panel">
+			
+			<h1>Build your UI with simple HTML markup</h1>
 						
-			<a id="tab-welcome" href="#" class="tab">About Jive</a>
+			<p>Use standard HTML &amp; CSS practices to create rich, object oriented UI components 
+				without writing a single line of JS. For example, making a <i>Dropdown</i> component is an easy HTML:</p>
 			
-			<a id="tab-features" href="#" class="tab">Jive Features</a>
 			
-			<div id="panel-welcome" class="panel">
-			
-				<h1>Less is more</h1>
-				
-				<p><strong>Jive</strong> wants you to write as little Javascript as possible. Why manage blocks of JS at the bottom every page when an intelligent library can take care of everything for you? <strong>Jive</strong> aims to put the focus on your application's goals, not your Javascript.</p>
-				
-				<h3>Write HTML &amp; CSS, let Jive do the rest</h3>
-				
-				<p>Use standard HTML &amp; CSS practices to create rich, object oriented UI components without writing a single line of JS.</p>
-				
-				<h3>Global Component Access</h3>
-				
-				<p>Forget assigning variables and remembering them: <strong>Jive</strong> collects all UI components and stores them in the global object. This means being able to access components anywhere you want, without having to worry about scope or naming conflicts.</p>
-				
-				<h3>Use objects to configure components</h3>
-				
-				<p>All components accept a configuration object upon being instantiated, each follow a similar structure. This means no more remembering parameter orders and type</p>
-				
-				<h3>
-				<a href="https://github.com/maxatbrs/JiveJS/wiki/Getting-Started">Getting Started</a> has never been so easy!</h3>
-				
-				
-			</div>
-			
-			<div id="panel-features" class="panel">
-										
-				<h1>So many features!</h1>
-				
-				<form id="loginForm" name="loginForm" class="jive-form" method="post" action="log_me_in.php">
+<pre>&lt;nav id="primary" class="dropdown"&gt;
 
-				    Username: <input type="text" name="username" class="valid-empty"/><br/>
-				    LastName: <input type="text" name="password" class="valid-empty"/><br/>
+	&lt;a href="#">JiveJS - Web UI Made Simple&lt;/a&gt;
+	
+	&lt;nav class="dropdown-menu" style="display:none;"&gt;
+
+		&lt;a href="#featues">Features&lt;/a&gt;
+
+	&lt;/nav&gt;
+
+&lt;/nav&gt;</pre>
+
+			<p>This is the same exact markup we use for the slide-down navigation on this page. Give this HTML some absolute positioning, and boom:
+				dropdown menu. By updating a component's CSS, a developer can easily customize UI components for their project.</p>
 				
-				    <input type="submit" name="myform-submit" value="Login" />
+			<h1>Why was Jive Built?</h1>
+			
+			<p>Developers always need common UI components such tabbed interfaces, overlays, and slideshows. There have been 
+				<a target="_blank" href="http://goo.gl/hCGRO">alot of attempts</a> to solve this problem. Everytime we went with one toolkit over another, 
+				we always had to hack it to pieces to work <i>within the scope of design</i> or write a lot of javscript hooks to make function.
+				We were sick of it and said: damnit, can't we just write HTML and let JS do the rest? </p>
 				
-				</form>
+			<h1>Simple to learn but powerful under the hood</h1>
+			
+			<p>Since Jive is essentially a "HTML markup framework for UI component delegation" (oh god), it means that anyone who knows a little
+				HTML can get busy, quick. Dig deeper and you will find a highly organized, object oriented approach to Javascript that makes
+				jQuery plugins look like old punch-card code. While thing is library is built ontop of jQuery, we've taken a different approach
+				towards UI component development.</p>
+		
+			<h1>White label JS</h1>
+			<p>Unlike libraries like Bootstrap, Jive is a white label UI framework meaning that it has almost no styling associated with it.
+				Designers are pretty picky people, so we leave it up to them to say what buttons or menus should look like. </p>
 				
-				<script type="text/javascript">
+			<h1>Go Get Some</h1>
+			<p>Seriously, go <a target="_blank" href="https://github.com/maxatbrs/JiveJS">download it from Github</a> and make something with it you turkey!</p>
+
+		</section>
+			
+		<section id="panel-features" class="panel">
+									
+			<h1>Features Roll</h1>
+			
+			<p>Here are some different compontents we use all the time:</p>
+			
+			<h2>Slideshow</h2>
+			
+			<p>Here is a slideshow that show's 3 pictures from Istagram. Nothing special, just a couple
+				image tags and a few classes:</p>
+			
+			<div id="testSlideShow" data-autostart="true" data-duration="4200" class="slideshow">
+		
+				<img src="http://distilleryimage6.s3.amazonaws.com/dff872b4163811e2a953123138131424_7.jpg" class="slide" />
+				<img src="http://distilleryimage2.s3.amazonaws.com/c446b9e8f38a11e18f4222000a1c9e1c_7.jpg" class="slide" />
+				<img src="http://distilleryimage5.s3.amazonaws.com/3e6b5e000c2611e2b60722000a1e952e_7.jpg" class="slide" />
+				
+			</div> 
+			
+			<h2>Form</h2>
+			
+			<p>Making forms is a big task, especially when it needs to do something useful. Take it easy with forms by using
+				simple HTML to create robust forms UI components with everything to field validation to success callbakcs.</p>
+			
+			<form id="loginForm" name="loginForm" class="jive-form" method="post" action="log_me_in.php">
+
+			    Username: <input type="text" name="username" class="valid-empty"/><br/>
+			    LastName: <input type="text" name="password" class="valid-empty"/><br/>
+			
+			    <input type="submit" name="myform-submit" value="Login" />
+			
+			</form>
+			
+			<script type="text/javascript">
 					
 					$(window).load(function () {
 						
@@ -134,23 +148,11 @@
 					
 				</script>
 
-				<h2>Slideshows are cool!</h2>
-				
-				<div id="testSlideshow" class="jive-slideshow autostart">
 			
-					<img src="http://distilleryimage6.s3.amazonaws.com/dff872b4163811e2a953123138131424_7.jpg" class="slide" />
-					<img src="http://distilleryimage2.s3.amazonaws.com/c446b9e8f38a11e18f4222000a1c9e1c_7.jpg" class="slide" />
-					<img src="http://distilleryimage5.s3.amazonaws.com/3e6b5e000c2611e2b60722000a1e952e_7.jpg" class="slide" />
-					
-				</div> 
 
-				
-				
-	
+		</section>
+		
 		</div>
-		
-		
-	</div>
 		
 		
 		

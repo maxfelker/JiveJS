@@ -58,11 +58,11 @@
  * JiveJS: Slideshows
  */
 
-.jive-slideshow {
+.slideshow {
 	position: relative;
 }
 
-.jive-slideshow .slide {
+.slideshow .slide {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -150,7 +150,7 @@
  * JiveJS: Forms
  */
 
-.jive-form .invalid {
+.form .invalid {
 	border-color: #f00;
 }
 
@@ -182,7 +182,7 @@
 	background-position: -16px 0;
 }
 
-.jive-msg {
+.msg {
 	padding: 10px;
 	-webkit-border-radius: 3px; /* Safari 3-4, iOS 1-3.2, Android ≤ 1.6 */
 	-moz-border-radius:    3px; /* Firefox 1.0+ */
@@ -193,19 +193,19 @@
 	box-shadow:         0 0 10px #000; /* Opera 10.5, IE9+, Firefox 4+, Chrome 6+, iOS 5 */
 }
 
-.jive-msg-failure {
+.msg-failure {
 	background-color: #e01616;
 	background-image: -moz-linear-gradient(top, #e01616 0%, #961603 100%);
 	color: #fff;
 }
 
-.jive-msg-warning {
+.msg-warning {
 	background-color: #f9aa00;
 	background-image: -moz-linear-gradient(top, #fabb00 0%, #f9aa00 100%);
 	color:#fff;
 }
 
-.jive-msg-success {
+.msg-success {
 	background-color: #8fc400;
 	background-image: -moz-linear-gradient(top, #8fc400 0%, #52aa00 100%);
 	color:#fff;
