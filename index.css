@@ -8,7 +8,7 @@ body {
 	margin:0;
 	font-family:Arial;
 	font-size:0.85rem;
-	color:#000;
+	color:#666;
 }
 
 h1 {
@@ -16,7 +16,12 @@ h1 {
 	border-bottom:1px dashed #F7464A;
 	padding-bottom:2rem;
 	margin-bottom:2rem;
+	color:#000;
 	
+}
+
+h1 span {
+	color:#F7464A;
 }
 
 h2 { 
@@ -25,10 +30,10 @@ h2 {
 	border-top:1px dashed #CCC;
 	padding-top:2rem;
 	margin-top:2rem;
+	color:#39c;
 }
 
 h3 {
-	color:#333;
 	padding-bottom:0rem;
 	margin-bottom:0rem;
 }
@@ -38,12 +43,27 @@ p {
 	
 }
 
-a,i {
-	color:#F7464A;
+a {
+	color: rgb(34, 179, 176);
+}
+
+ul {
+
+	list-style-type: none;
+	padding:0;
+}
+
+ul li{
+
+}
+
+i {
+	color:#39c;
 }
 
 .button {
 	display:block;
+	width:220px;
 	padding:2rem 1rem;
 	text-align:center;
 	color:#FFF;
@@ -51,27 +71,41 @@ a,i {
 	border-bottom: 10px solid rgb(11, 146, 143);
 	text-decoration:none;
 	border-radius:10px;
+	margin:25px 0 0 0;
+	font-size:1rem;
 }
 
 
 
 #contentContainer {
-	padding:1rem 2rem;
-	max-width:800px;
+	padding:6rem 2rem 2rem 2rem;
+	margin:0 auto;
+}
+
+#panel-welcome h1:first-child {
+	border:none;
+	margin-bottom:0;
+	width:800px;
 	margin:0 auto;
 }
 
 /* custom nav */
 nav#primary {
-	background: rgb(34, 179, 176);
-	border-bottom: 10px solid rgb(11, 146, 143);
+	background:rgba(0,0,0,0.7);
+	position:fixed;
+	top:0;left:0;right:0;
 }
 
 nav#primary a {
 	color:#FFF;
 	text-decoration:none;
-	display:block;
-	padding:2rem;
+	display:inline-block;
+	padding:1rem;
+}
+
+nav#primary a:first-child {
+	background:#F7464A;
+	
 }
 
 
@@ -93,4 +127,10 @@ pre {
 #testSlideShow,
 #testSlideShow img {
 	height:300px;
+}
+
+footer {
+	text-align: right;
+	border-top:1px dashed #CCC;
+	padding:1rem;
 }
