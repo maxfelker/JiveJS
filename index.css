@@ -63,7 +63,7 @@ i {
 
 .button {
 	display:block;
-	width:220px;
+	width:100%;
 	padding:2rem 1rem;
 	text-align:center;
 	color:#FFF;
@@ -75,6 +75,11 @@ i {
 	font-size:1rem;
 }
 
+.button + .button {
+	background: #F7464A;
+	border-bottom: 10px solid rgb(204, 59, 59);
+}
+
 
 
 #contentContainer {
@@ -82,7 +87,7 @@ i {
 	margin:0 auto;
 }
 
-#panel-welcome h1:first-child {
+section h1:first-child {
 	border:none;
 	margin-bottom:0;
 	width:800px;
@@ -108,26 +113,6 @@ nav#primary a:first-child {
 	
 }
 
-
-
-nav#primary .dropdown-menu a{
-	border-top:1px dotted #FFF;
-}
-
-pre {
-	padding:1rem;
-	background:#222;
-	border:5px solid #777;
-	color:rgb(87, 201, 255);
-	border-radius:10px;
-	font-size:1rem;
-	margin:2rem;
-}
-
-#testSlideShow,
-#testSlideShow img {
-	height:300px;
-}
 
 footer {
 	text-align: right;

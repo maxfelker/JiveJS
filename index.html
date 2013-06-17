@@ -17,14 +17,14 @@
         <!-- Minified -->
         <script type="text/javascript" src="jive.min.js?20130614"></script>
       	
-      	<!-- Development Includes (uncomment these for dev) -->
-      	<script type="text/javascript" src="jive.js"></script>
+      	<!-- Development Includes (uncomment these for dev) 
+      	<script type="text/javascript" src="lib/jive.js"></script>
       	<script type="text/javascript" src="lib/oop.js"></script>
       	<script type="text/javascript" src="lib/canopy.js"></script>
       	<script type="text/javascript" src="lib/popup.js"></script>
       	<script type="text/javascript" src="lib/modal.js"></script> 
       	<script type="text/javascript" src="lib/tabs.js"></script>
-      	<script type="text/javascript" src="lib/slideshow.js"></script>
+      	<script type="text/javascript" src="lib/slideshow.js"></script>-->
       			
         <!-- Jive CSS -->
         <link rel="stylesheet" type="text/css" href="jive.css?20130614" />
@@ -46,37 +46,32 @@
         
 	 </head>
 	 
-	<body id="container" class="tabbed">
+	<body>
 		
 		<!-- Start Dropdown Block -->
 		
 		<nav id="primary">
 	
 			<a id="tab-welcome" href="#welcome" class="tab">JiveJS</a>
-			<a id="tab-globalObject" href="#globalObject" class="tab">Global Object</a>
-			<a id="tab-tabbedUI" href="#tabbedUI" class="tab">Tabbed UI</a>
-			<a id="tab-dropdown" href="#dropdown" class="tab">Dropdown</a>
-			<a id="tab-slideshow" href="#slideshow" class="tab">Slideshow</a>
-			<a id="tab-form" href="#form" class="tab">Form</a>
-			<a id="tab-messenger" href="#messenger" class="tab">Messenger</a>
-			<a id="tab-canopy" href="#canopy" class="tab">Canopy</a>
-			<a id="tab-popup" href="#popup" class="tab">Popup</a>
-			<a id="tab-modal" href="#modal" class="tab">Modal</a>
-
+			
 		</nav>
 		
 		<div id="contentContainer">
 				
 		<!-- End Dropdown Block -->
 		
-			<section id="panel-welcome" class="panel">
+			<section>
 				
 				<h1>Use standard HTML &amp; CSS practices to create rich UI components <span>without 
 				writing a single line of Javascript.</span> Dig deeper and find a rock solid, object oriented UI 
 				interface with all the tools you need.
 				
 				<a class="button" href="https://github.com/maxatbrs/JiveJS" target="_blank">
-					Download JiveJS  v1.0.0
+					Download JiveJS  v0.0.1
+				</a>
+				
+				<a class="button" href="https://github.com/maxatbrs/JiveJS/wiki" target="_blank">
+					Read the Docs
 				</a>
 				
 				</h1>
@@ -110,100 +105,7 @@
 				<p>Seriously, if you are still here go <a target="_blank" href="https://github.com/maxatbrs/JiveJS">download it from Github</a> and make something with it you turkey!</p>
 	
 			</section>
-			
-			<section id="panel-globalObject" class="panel">Global Object</section>
-			<section id="panel-tabbedUI"  class="panel">Tabbed UI</section>
-			
-			<section id="panel-dropdown"  class="panel">
-				
-				<h1>Dropdowns</h1>
-
-<pre>&lt;nav id="primary" class="dropdown"&gt;
-
-	&lt;a href="#">Max's Cool Sites&lt;/a&gt;
 	
-	&lt;nav class="dropdown-menu" style="display:none;"&gt;
-
-		&lt;a href="http://gus.maxfelker.com">Gus&lt;/a&gt;
-		&lt;a href="http://www.centerpointgame.com">Centerpoint&lt;/a&gt;
-
-	&lt;/nav&gt;
-
-&lt;/nav&gt;</pre>
-
-				<nav id="primary" class="dropdown">
-		
-					<nav class="dropdown-menu" style="display:none;">
-						
-						<!-- Tabbed Navigation -->
-					
-						<a href="http://gus.maxfelker.com">Gus</a>
-						<a href="http://www.centerpointgame.com">Centerpoint</a>
-		
-					</nav>	
-		
-				</nav>
-
-			</section>
-			
-			<section id="panel-slideshow"  class="panel">
-
-			<h1>Slideshow</h1>
-				
-				<p>Here is a slideshow that show's 3 pictures from Istagram. Nothing special, just a couple
-					image tags and a few classes:</p>
-				
-				<div id="testSlideShow" data-autostart="true" data-duration="4200" class="slideshow">
-			
-					<img src="http://distilleryimage6.s3.amazonaws.com/dff872b4163811e2a953123138131424_7.jpg" class="slide" />
-					<img src="http://distilleryimage2.s3.amazonaws.com/c446b9e8f38a11e18f4222000a1c9e1c_7.jpg" class="slide" />
-					<img src="http://distilleryimage5.s3.amazonaws.com/3e6b5e000c2611e2b60722000a1e952e_7.jpg" class="slide" />
-					
-				</div> 
-
-
-			</section>
-			
-			<section id="panel-form"  class="panel">
-				
-				<h2>Form</h2>
-				
-				<p>Making forms is a big task, especially when it needs to do something useful. Take it easy with forms by using
-					simple HTML to create robust forms UI components with everything to field validation to success callbakcs.</p>
-				
-				<form id="loginForm" name="loginForm" class="jive-form" method="post" action="log_me_in.php">
-	
-				    Username: <input type="text" name="username" class="valid-empty"/><br/>
-				    LastName: <input type="text" name="password" class="valid-empty"/><br/>
-				
-				    <input type="submit" name="myform-submit" value="Login" />
-				
-				</form>
-				
-				<script type="text/javascript">
-						
-					$(window).load(function () {
-						
-						$j.forms.loginForm.success(function(form) {
-						
-							$j.msg({
-								type:"success",
-								content: "Alright, form validated!"
-							})
-						
-						});
- 
-					});
-					
-				</script>
-				
-			</section>
-			<section id="panel-canopy"  class="panel">Canopy</section>
-			<section id="panel-popup" class="panel">Popup</section>
-			<section id="panel-modal" class="panel">Modal</section>
-			<section id="panel-messenger"  class="panel">Messenger</section>
-		
-		
 		</div>
 		
 		<footer>

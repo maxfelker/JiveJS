@@ -3,7 +3,7 @@
 // @output_file_name jive.min.js
 // @code_url https://raw.github.com/maxatbrs/JiveJS/master/lib/drag.js
 // @code_url https://raw.github.com/maxatbrs/JiveJS/master/lib/oop.js
-// @code_url https://raw.github.com/maxatbrs/JiveJS/master/jive.js
+// @code_url https://raw.github.com/maxatbrs/JiveJS/master/lib/jive.js
 // @code_url https://raw.github.com/maxatbrs/JiveJS/master/lib/canopy.js
 // @code_url https://raw.github.com/maxatbrs/JiveJS/master/lib/msg.js
 // @code_url https://raw.github.com/maxatbrs/JiveJS/master/lib/tabs.js
