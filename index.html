@@ -15,9 +15,9 @@
         <script type="text/javascript" src="jquery-1.10.1.min.js?20130729"></script>
        
         <!-- Minified -->
-        <script type="text/javascript" src="jive.min.js?20130729"></script>
+        <script type="text/javascript" src="jive.min.js?20131211"></script>
       	
-      	<!-- Development Includes (uncomment these for dev)
+      	<!-- Development Includes (uncomment these for dev) 
       	<script type="text/javascript" src="lib/jive.js"></script>
       	<script type="text/javascript" src="lib/oop.js"></script>
       	<script type="text/javascript" src="lib/canopy.js"></script>
@@ -25,13 +25,15 @@
       	<script type="text/javascript" src="lib/modal.js"></script> 
       	<script type="text/javascript" src="lib/tabs.js"></script>
       	<script type="text/javascript" src="lib/slideshow.js"></script>
-      	<script type="text/javascript" src="lib/dropdown.js"></script> -->
+      	<script type="text/javascript" src="lib/dropdown.js"></script>
+      	<script type="text/javascript" src="lib/msg.js"></script>
+      	<script type="text/javascript" src="lib/form.js"></script>-->
       			
         <!-- Jive CSS -->
-        <link rel="stylesheet" type="text/css" href="jive.css?20130729" />
+        <link rel="stylesheet" type="text/css" href="jive.css?20131212" />
        
    		<!-- Styles for this Page -->
-        <link rel="stylesheet" type="text/css" href="index.css?20130729" />
+        <link rel="stylesheet" type="text/css" href="index.css?20131211" />
         
         <!-- GA -->
         <script>
@@ -51,12 +53,12 @@
 		
 		<nav id="primary">
 	
-			<a href="#whydidyouclickme">JiveJS</a>
+			<a>JiveJS</a>
 			
 		</nav>
 		
 		<div id="contentContainer">
-						
+					
 		
 			<section>
 				
@@ -65,7 +67,7 @@
 				interface with all the tools you need.
 				
 				<a class="button" href="https://github.com/maxatbrs/JiveJS" target="_blank">
-					Download JiveJS  v0.0.2
+					Download JiveJS  v0.0.3
 				</a>
 				
 				<a class="button" href="https://github.com/maxatbrs/JiveJS/wiki" target="_blank">
@@ -98,10 +100,110 @@
 					HTML can get busy, quick. Dig deeper and you will find a highly organized, object oriented approach to Javascript that makes
 					jQuery plugins look like old punch-card code. While thing is library is built ontop of jQuery, we've taken a different approach
 					towards UI component development.</p>
+					
+				<h2>They See Me Trackin', They Be Hatin'</h2>
+				<p> We use Pivotal Tracker to maintain the project. <a href="https://www.pivotaltracker.com/s/projects/540025" target="_blank">Check it out here</a></p>
 	
-				<h2>Go Get Some</h2>
-				<p>Seriously, if you are still here go <a target="_blank" href="https://github.com/maxatbrs/JiveJS">download it from Github</a> and make something with it you turkey!</p>
+				<h2>Compatibility</h2>
+				<p>Firefox Current / Chrome Current / IE9+</p>
 	
+			</section>
+			
+			<section>
+				
+				<h2>Features</h2>
+				
+				<p>Here's a quick demo of some feautes JiveJS has. Take a look at the source if you're interested.</p>
+				
+				<h3>Tabs | <a href="https://github.com/maxatbrs/JiveJS/wiki/Tabbed-UI" target="_blank">Docs</a> </h3>
+				
+				<p>Tabbed content that has browser hash support. Try clicking on tabs then playing with the hash in the URL</p>
+				
+				<div id="myFirstTabs" class="tabbed">
+
+				    <a id="tab-blue" class="tab" href="#blue">Blue Tab</a>
+				    <a id="tab-red" class="tab" href="#red">Red Tab</a>
+				
+				    <div id="panel-blue" class="panel">This is the blue panel</div>
+				    <div id="panel-red" class="panel"> This is my red panel</div>
+				
+				</div>
+				
+				<h3>Slideshow | <a href="https://github.com/maxatbrs/JiveJS/wiki/Slideshow" target="_blank">Docs</a> </h3>
+				
+				<p>Making a slideshow is super easy</p>
+				
+				<div id="testSlideShow" data-autostart="true" data-duration="4200" class="slideshow">
+				     
+					<img src="http://distilleryimage6.s3.amazonaws.com/dff872b4163811e2a953123138131424_7.jpg" class="slide" />
+					<img src="http://distilleryimage2.s3.amazonaws.com/c446b9e8f38a11e18f4222000a1c9e1c_7.jpg" class="slide" />
+					<img src="http://distilleryimage5.s3.amazonaws.com/3e6b5e000c2611e2b60722000a1e952e_7.jpg" class="slide" />
+				          
+				</div> 
+				
+				<h3>JiveForm | <a href="https://github.com/maxatbrs/JiveJS/wiki/JiveForm" target="_blank">Docs</a> </h3>
+				
+				<p>Validated, intelligent forms with just some HTML</p>
+				
+				<form id="loginForm" name="loginForm" class="jive-form" action="log_me_in.php">
+
+				    Username: <input type="text" name="username" class="valid-empty"/><br/>
+				    LastName: <input type="text" name="password" class="valid-empty"/><br/>
+				
+				    <input type="submit" name="myform-submit" value="Login" />
+				
+				</form>
+				
+				<script>
+					
+					$(function() {
+						
+						// success
+						$j.forms.loginForm.success(function(form) {
+						    
+						   $j.msg({type:"success",content:"Nice, form is ready to do something"});
+						
+						});
+						
+						// failure 
+						$j.forms.loginForm.failure(function(form) {
+						    
+						   $j.msg({type:"warning",content:"Both fields need to filled out"});
+						
+						});
+						
+					})
+					
+					
+				</script>
+				
+				<h3>Messenger | <a href="https://github.com/maxatbrs/JiveJS/wiki/Messenger" target="_blank">Docs</a> </h3>
+				
+				<p>Notification UI component | 
+					<a onclick='$j.msg({content:"Ding ding, this is a notification!"});'>Info</a> |
+					<a onclick='$j.msg({type:"success",content:"This is a success!"});'>Success</a> |
+					<a onclick='$j.msg({type:"warning",content:"Time to get your attention!"});'>Warning</a> |
+					<a onclick='$j.msg({type:"failure",content:"Something went wrong!"});'>Failure</a> 
+				</p>
+				
+				<h3>Canopy | <a href="https://github.com/maxatbrs/JiveJS/wiki/Canopy" target="_blank">Docs</a> </h3>
+				<p>Simple, reusable overlay | <a onclick="$j.canopy.display()">Show Canopy</a> </p>
+				
+				
+				<h3>Modal | <a href="https://github.com/maxatbrs/JiveJS/wiki/Modal" target="_blank">Docs</a> </h3>
+				<p>A modal box | 
+					<a onclick="$j.modal.display({title:'You found the Modal Example',html:$('#modalExample')})">Show Modal</a>
+				</p>
+				
+				<!-- This gets appended to the modal -->
+				<div id="modalExample" style="display: none;">
+				
+					<h3>Congratulations, you're modalin</h3>
+					
+					<p>Modals are super easy to make. Take a look at the source for an example.</p>
+				
+				</div>	
+				
 			</section>
 	
 		</div>
@@ -111,8 +213,6 @@
 			<a href="https://github.com/maxatbrs/JiveJS/" target="_blank">GitHub</a> -
 			<a href="https://www.pivotaltracker.com/s/projects/540025" target="_blank">Pivotal</a> -
 			by <a href="http://www.maxfelker.com"target="_blank" >Max Felker</a>
-			
-
 			
 		</footer>
 		

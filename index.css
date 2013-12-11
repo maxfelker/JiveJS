@@ -44,6 +44,8 @@ p {
 }
 
 a {
+	text-decoration:underline;
+	cursor:pointer;
 	color: rgb(34, 179, 176);
 }
 
@@ -96,21 +98,22 @@ section h1:first-child {
 
 /* custom nav */
 nav#primary {
-	background:rgba(0,0,0,0.7);
-	position:fixed;
-	top:0;left:0;right:0;
+	background:#444;
+	
 }
 
 nav#primary a {
 	color:#FFF;
 	text-decoration:none;
-	display:inline-block;
+	display:block;
 	padding:1rem;
+	width:60px;
+	text-align:center;
 }
 
 nav#primary a:first-child {
 	background:#F7464A;
-	
+	font-size:1rem;
 }
 
 
@@ -118,4 +121,30 @@ footer {
 	text-align: right;
 	border-top:1px dashed #CCC;
 	padding:1rem;
+}
+
+
+div#testSlideShow,
+div#testSlideShow .slide {
+	height:100px;
+	width:100px;
+}
+
+.panel {
+	padding:1rem;
+	border:1px solid #EEE;
+	clear:both;
+}
+
+.tab {
+	text-decoration: none;
+	border:1px solid #EEE;
+	padding:1rem;
+	margin:0 3px -1px 0;
+	float:left;
+}
+
+.tab.current {
+	color:#000;
+		border-bottom:1px solid #FFF;
 }

@@ -1,54 +1,48 @@
-/* ==========================================================================
-   JiveJS jQuery UI Library
-========================================================================== */
+/* JiveJS - CSS File
+ * 
+ * Basic styles for the UI components
+ * 
+*/
 
-/*
- * JiveJS: Canopies
+/* Canopy 
+ * 
+ * Overlay component that used to "blackout" the page 
+ * with a semi transparent overlay. Used generally in the 
+ * conjunction with modal windows
+ * 
  */
 
-#canopy-overlay {
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: 99997;
-	min-height: 100%;
-	width: 100%;
-	height: 100%;
-	background: #000;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"; /* IE8 */
-	filter: alpha(opacity=70); /* IE 5-7 */
-	opacity: 0.70; /* Chrome 4+, Firefox 2+, Safari 3.1+, Opera 9+, IE9+, iOS 3.2+, Android 2.1+ */
-}
-
+/* Overlay div */
 #canopy {
 	position: fixed;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
-	z-index: 99998;
+	z-index: 998;
 	min-height: 100%;
 	width: 100%;
 	height: 100%;
+	background:rgba(0,0,0,0.7);
 }
 
-#canopy-close-btn {
+#canopy-close {
+	background:#000;
+	border-radius:50%;
 	position: absolute;
-	right: 0;
-	padding: 10px;
+	right: 1rem;
+	top:1rem;
+	padding: 0.75rem 1rem;
 	color: #fff;
 	cursor: pointer;
 }
 
-#canopy-btn-close:hover {
-	cursor: pointer;
+#canopy-close:hover {
+	background:#FFF;
+	color:#000;
 }
 
-/*
- * JiveJS: Tabs
- */
+/* Tabs */
 
 .tabs-container {}
 .tab {}
@@ -58,48 +52,40 @@
  * JiveJS: Slideshows
  */
 
+/* Slide show containers need to be relative so the 
+ * .slide elements position to the container. 
+*/
 .slideshow {
 	position: relative;
 }
 
+/* Slide element */
 .slideshow .slide {
 	position: absolute;
 	top: 0;
 	left: 0;
 }
 
-
 /*
- * JiveJS: Popups
+ * Popups
  */
-
 .popup {
 	position: absolute;
-	z-index: 99999;
+	z-index: 999;
 	padding: 0;
-	-webkit-border-radius: 10px; /* Safari 3-4, iOS 1-3.2, Android ≤ 1.6 */
-	-moz-border-radius:    10px; /* Firefox 1.0+ */
-	border-radius:         10px; /* Opera 10.5, IE9+, Safari 5, Chrome, Firefox 4+, iOS 4, Android 2.1+ */
 	background: #fff;
-	-webkit-box-shadow: 0 0 10px #222; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-	-moz-box-shadow:    0 0 10px #222; /* Firefox 3.5+ */
-	box-shadow:         0 0 10px #222; /* Opera 10.5, IE9+, Firefox 4+, Chrome 6+, iOS 5 */
+	box-shadow: 0 0 10px #222;
 }
 
 .popup .popup-toolbar {
-	padding: 20px;
+	padding: 1rem;
 	border-bottom: 1px solid #ccc;
-	-webkit-border-radius: 10px 10px 0 0; /* Safari 3-4, iOS 1-3.2, Android ≤ 1.6 */
-	-moz-border-radius:    10px 10px 0 0; /* Firefox 1.0+ */
-	border-radius:         10px 10px 0 0; /* Opera 10.5, IE9+, Safari 5, Chrome, Firefox 4+, iOS 4, Android 2.1+ */
 	background: #eee;
 }
 
 .popup .popup-toolbar .popup-close {
-	position: absolute;
-	top: 20px;
-	right: 20px;
 	cursor: pointer;
+	float:right;
 }
 
 .popup .popup-toolbar:hover {
@@ -115,10 +101,6 @@
     height: 15px;
     border-width: 1px;
     border-style: solid;
-    border-color: #aaa #999 #999 #aaa;
-    -webkit-border-radius: 0 0 10px 0; /* Safari 3-4, iOS 1-3.2, Android ≤ 1.6 */
-    -moz-border-radius:    0 0 10px 0; /* Firefox 1.0+ */
-    border-radius:         0 0 10px 0; /* Opera 10.5, IE9+, Safari 5, Chrome, Firefox 4+, iOS 4, Android 2.1+ */
 	background: none repeat scroll 0 0 #ccc;
     cursor: nw-resize;
 }
@@ -132,12 +114,12 @@
 }
 
 /*
- * JiveJS: Modals & Loaders
+ * Modal
  */
 
-/*
- * JiveJS: Tooltips
- */
+.popup#modal {
+	position: fixed;
+}
 
 /*
  * JiveJS: Dropdowns
@@ -160,55 +142,39 @@
 
 #jive-messenger {
 	position: fixed;
-	top: 12px;
-	right: 30%;
-	left: 30%;
+	top: 0;
+	right:0 ;
+	left: 0;
 	z-index: 100;
-	font-size: 12px;
 }
 
 #jive-messenger-close {
 	position: absolute;
-	top: 10px;
-	right: 10px;
-	overflow: hidden;
-	width: 16px;
-	height: 16px;
+	right: 0rem;
+	top:0;
+	padding:1rem;
 	color: #fff;
 	cursor: pointer;
 }
 
-#jive-messenger-close:hover {
-	background-position: -16px 0;
-}
-
 .jive-msg {
-	padding: 10px;
-	-webkit-border-radius: 3px; /* Safari 3-4, iOS 1-3.2, Android ≤ 1.6 */
-	-moz-border-radius:    3px; /* Firefox 1.0+ */
-	border-radius:         3px; /* Opera 10.5, IE9+, Safari 5, Chrome, Firefox 4+, iOS 4, Android 2.1+ */
-	background: #fff;
-	-webkit-box-shadow: 0 0 10px #000; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-	-moz-box-shadow:    0 0 10px #000; /* Firefox 3.5+ */
-	box-shadow:         0 0 10px #000; /* Opera 10.5, IE9+, Firefox 4+, Chrome 6+, iOS 5 */
+	padding: 1rem;
+	text-align:center;
+	background: rgb(34, 179, 176);
+	color:#fff;
+	border-bottom:1px solid #FFF;
 }
 
 .jive-msg-failure {
-	background-color: #e01616;
-	background-image: -moz-linear-gradient(top, #e01616 0%, #961603 100%);
-	color: #fff;
+	background: #F7464A;
 }
 
 .jive-msg-warning {
-	background-color: #f9aa00;
-	background-image: -moz-linear-gradient(top, #fabb00 0%, #f9aa00 100%);
-	color:#fff;
+	background: #FFC83C;
 }
 
 .jive-msg-success {
-	background-color: #8fc400;
-	background-image: -moz-linear-gradient(top, #8fc400 0%, #52aa00 100%);
-	color:#fff;
+	background:rgba(119, 196, 21, 1);
 }
 
 /* JiveJS: Dragging */
@@ -216,32 +182,4 @@
 .drag {
 	cursor: move;
 	user-select: none;
-}
-
-
-/*
- * JiveJS: CSS3
- */
-
-.grow {
-    -moz-animation-name: resize;
-    -moz-animation-duration: 3s;
-    -moz-animation-iteration-count: 1;
-    -moz-animation-direction: alternate;
-}
-
-@-moz-keyframes resize {
-	0% {
-		padding: 0;
-	}
-
-	50% {
-		width: 500px;
-		height: 500px;
-	}
-
-	100% {
-		width: 1000px;
-		height: 1000px;
-	}
 }
