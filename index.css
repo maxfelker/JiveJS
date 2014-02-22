@@ -148,3 +148,12 @@ div#testSlideShow .slide {
 	color:#000;
 		border-bottom:1px solid #FFF;
 }
+
+
+.jive-form .invalid {
+	color:#F7464A;
+}
+
+.jive-form .valid {
+	color:rgb(119, 196, 21);
+}

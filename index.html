@@ -9,13 +9,13 @@
         <!-- Title / Description -->
 		<title>JiveJS - Web UI Made Simple</title>
 		<meta name="description" content="A lightweight, HTML driven UI framework that's easy to learn
-		and powerful under the hood." />
+		and powerful under the hood." /> 
                 
-        <!-- Jquery -->
-        <script type="text/javascript" src="jquery-1.10.1.min.js?20130729"></script>
+        <!-- Jquery 2.x -->
+        <script type="text/javascript" src="jquery-2.1.0.min.js"></script>
        
-        <!-- Minified -->
-        <script type="text/javascript" src="jive.min.js?20131211"></script>
+        <!-- Minified Jive -->
+        <script type="text/javascript" src="jive.min.js"></script>
       	
       	<!-- Development Includes (uncomment these for dev) 
       	<script type="text/javascript" src="lib/jive.js"></script>
@@ -147,28 +147,39 @@
 				
 				<form id="loginForm" name="loginForm" class="jive-form" action="log_me_in.php">
 
-				    Username: <input type="text" name="username" class="valid-empty"/><br/>
-				    LastName: <input type="text" name="password" class="valid-empty"/><br/>
+				    Email: <input type="text" name="email" data-validate="email" required/><br/>
+				    First Name: <input type="text" name="firstName" data-validate="alpha" required/><br/>
 				
 				    <input type="submit" name="myform-submit" value="Login" />
-				
+					
 				</form>
 				
-				<script>
+				<!-- JiveForm Javascript Example -->
+				<script type="text/javascript">
 					
 					$(function() {
 						
-						// success
+						// When the form validates
 						$j.forms.loginForm.success(function(form) {
 						    
+						    // Show a success message
 						   $j.msg({type:"success",content:"Nice, form is ready to do something"});
 						
 						});
 						
-						// failure 
+						// When the form fails to validate 
 						$j.forms.loginForm.failure(function(form) {
+							
+							// loop through each of the invalid fields
+							form.invalidFields.each(function() {
+								
+								// show error
+								 $j.msg({
+								 	type:"failure",
+								 	content: $(this).attr("name") + " field doesn't validate"
+								 });
 						    
-						   $j.msg({type:"warning",content:"Both fields need to filled out"});
+						 	});
 						
 						});
 						
