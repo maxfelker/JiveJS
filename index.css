@@ -137,16 +137,3 @@ div#testSlideShow .slide {
 .jive-form .valid {
 	color:rgb(119, 196, 21);
 }
-
-.dropdown {
-	border:1px solid #CCC;
-	background:#EEE;
-	padding:1rem;
-	max-width:400px;
-}
-
-.dropdown .dropdown-menu a {
-	display:block;
-	margin-top:1rem;
-	padding-left:1rem;	
-}
