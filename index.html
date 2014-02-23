@@ -5,6 +5,10 @@
      <head>
         
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+		<meta http-equiv="ClearType" content="true">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         
         <!-- Title / Description -->
 		<title>JiveJS - Web UI Made Simple</title>
@@ -56,7 +60,7 @@
 	
 		<div id="contentContainer">
 				
-			<h1>Use standard HTML &amp; CSS practices to create rich UI components <span>without 
+			<h1 id="missionStatement">Write simple HTML structures and create rich UI components <span>without 
 				writing a single line of Javascript.</span> Dig deeper and find a rock solid, object oriented UI 
 				interface with all the tools you need.</h1>
 			
@@ -68,85 +72,56 @@
 				Read the Docs
 			</a>
 
-			<section>
-
-				<h2>Mean, Lean UI Machine</h2>
-				<p>Weighing in at a <i>mere 18kb</i>, Jive will be one of the smallest dependencies on your page. It is built ontop of the 
-				popular JS framework, jQuery v2.1.x</p>
-	
-				<h2>White Label UI </h2>
-				
-				<p>Unlike other UI libraries like Bootstrap, Jive is a white label UI framework meaning <i>that it has no aesthetic styling</i>. 
-				Buttons, menus, and other UI components only have the barebones stylings. The rest of it is up to you. If there's one 
-				thing we've learned: designers are pretty picky people so we give them complete creative freedom by having no hand
-				in design choices.</p>
-	
-				<h2>JiveJS was built to make things easy</h2>
-				
-				<p>Developers always need common UI components such tabbed interfaces, overlays, and slideshows. There have been 
-					<a target="_blank" href="http://goo.gl/hCGRO">alot of attempts</a> to solve this problem. Everytime we went with one toolkit over another, 
-					we always had to hack it to pieces to work <i>within the scope of design</i> or write a lot of javscript hooks to make function.
-					We were sick of it and said: damnit, can't we just write HTML and let JS do the rest? </p>
-					
-				<h2>The Goal: simple to learn but powerful under the hood</h2>
-				
-				<p>Since Jive is essentially a "HTML markup framework for UI component delegation" (oh god), it means that anyone who knows a little
-					HTML can get busy, quick. Dig deeper and you will find a highly organized, object oriented approach to Javascript that makes
-					jQuery plugins look like old punch-card code. While thing is library is built ontop of jQuery, we've taken a different approach
-					towards UI component development.</p>
-					
-				<h2>They See Me Trackin', They Be Hatin'</h2>
-				<p> We use Pivotal Tracker to maintain the project. <a href="https://www.pivotaltracker.com/s/projects/540025" target="_blank">Check it out here</a></p>
-	
-				<h2>Compatibility</h2>
-				<p>Firefox Current / Chrome Current / IE9+</p>
-	
-			</section>
-			
-			<h2>Features</h2>
-				
-			<p>Here's a quick demo of some feautes JiveJS has. Take a look at the source if you're interested.</p>
-			
-			<!-- Tabs Example Section -->
+			<!-- Messenger Example Section -->
 			<section>
 				
-				<h3>Tabs <a class="button button-primary button-mini" href="https://github.com/maxatbrs/JiveJS/wiki/Tabbed-UI" target="_blank">Docs</a> </h3>
+				<h2>Messenger <a class="button button-primary button-mini" href="https://github.com/maxatbrs/JiveJS/wiki/Messenger" target="_blank">Docs</a> </h2>
 				
-				<p>Tabbed content that has browser hash support. Try clicking on tabs then playing with the hash in the URL</p>
-				
-				<div id="myFirstTabs" class="tabbed">
-
-				    <a id="tab-blue" class="tab" href="#blue">Blue Tab</a>
-				    <a id="tab-red" class="tab" href="#red">Red Tab</a>
-				
-				    <div id="panel-blue" class="panel">This is the blue panel</div>
-				    <div id="panel-red" class="panel"> This is my red panel</div>
-				
-				</div>
+				<p>A customizable notification UI component. Try it out:<br/><br/>
+					
+					<a class="button" onclick='$j.msg({content:"Ding ding, this is a notification!"});'>Info</a> 
+					<a class="button" onclick='$j.msg({type:"success",content:"This is a success!"});'>Success</a> 
+					<a class="button" onclick='$j.msg({type:"warning",content:"Time to get your attention!"});'>Warning</a> 
+					<a class="button" onclick='$j.msg({type:"failure",content:"Something went wrong!"});'>Failure</a> 
+					<a class="button" onclick='$j.msg({content:"This is a sticky notification!",sticky:true});'>Sticky</a>
+					
+				</p>
 				
 			</section>
 			
-			<!-- Slideshow Example Section -->
+			<!-- Canopy Example Section -->
 			<section>
 				
-				<h3>Slideshow <a class="button button-primary button-mini"  href="https://github.com/maxatbrs/JiveJS/wiki/Slideshow" target="_blank">Docs</a> </h3>
+				<h2>Canopy <a class="button button-primary button-mini" href="https://github.com/maxatbrs/JiveJS/wiki/Canopy" target="_blank">Docs</a> </h2>
+				<p>Simple, reusable overlay<br/><br/> 
+					<a class="button" onclick="$j.canopy.display()">Show Canopy</a>
+				</p>
 				
-				<p>Making a slideshow is super easy</p>
+			</section>
+			
+			<!-- Modal Example Section -->
+			<section>	
+			
+				<h2>Modal <a class="button button-primary button-mini" href="https://github.com/maxatbrs/JiveJS/wiki/Modal" target="_blank">Docs</a> </h2>
+				<p>A modal box <br/><br/>
+					<a class="button" onclick="$j.modal.display({title:'You found the Modal Example',html:$('#modalExample')})">Show Modal</a>
+				</p>
 				
-				<div id="testSlideShow" data-autostart="true" data-duration="4200" class="slideshow">
-				     
-					<img src="http://distilleryimage6.s3.amazonaws.com/dff872b4163811e2a953123138131424_7.jpg" class="slide" />
-					<img src="http://distilleryimage2.s3.amazonaws.com/c446b9e8f38a11e18f4222000a1c9e1c_7.jpg" class="slide" />
-					<img src="http://distilleryimage5.s3.amazonaws.com/3e6b5e000c2611e2b60722000a1e952e_7.jpg" class="slide" />
-				          
-				</div> 
+				<!-- This gets appended to the modal -->
+				<div id="modalExample" style="display: none;">
+				
+					<h2>Congratulations, you're modalin</h2>
+					
+					<p>Modals are super easy to make. Take a look at the source for an example.</p>
+				
+				</div>	
 				
 			</section>
 			
 			<!-- JiveForm Example Section -->
 			<section>
 				
-				<h3>JiveForm <a class="button button-primary button-mini" href="https://github.com/maxatbrs/JiveJS/wiki/JiveForm" target="_blank">Docs</a> </h3>
+				<h2>JiveForm <a class="button button-primary button-mini" href="https://github.com/maxatbrs/JiveJS/wiki/JiveForm" target="_blank">Docs</a> </h2>
 				
 				<p>Validated, intelligent forms with just some HTML</p>
 				
@@ -195,52 +170,80 @@
 				
 			</section>
 			
-			
-			<!-- Messenger Example Section -->
+			<!-- Tabs Example Section -->
 			<section>
 				
-				<h3>Messenger <a class="button button-primary button-mini" href="https://github.com/maxatbrs/JiveJS/wiki/Messenger" target="_blank">Docs</a> </h3>
+				<h2>Tabs <a class="button button-primary button-mini" href="https://github.com/maxatbrs/JiveJS/wiki/Tabbed-UI" target="_blank">Docs</a> </h2>
 				
-				<p>A customizable notification UI component. Try it out:<br/><br/>
-					
-					<a class="button" onclick='$j.msg({content:"Ding ding, this is a notification!"});'>Info</a> 
-					<a class="button" onclick='$j.msg({type:"success",content:"This is a success!"});'>Success</a> 
-					<a class="button" onclick='$j.msg({type:"warning",content:"Time to get your attention!"});'>Warning</a> 
-					<a class="button" onclick='$j.msg({type:"failure",content:"Something went wrong!"});'>Failure</a> 
-					<a class="button" onclick='$j.msg({content:"This is a sticky notification!",sticky:true});'>Sticky</a>
-					
-				</p>
+				<p>Tabbed content that has browser hash support. Try clicking on tabs then playing with the hash in the URL</p>
+				
+				<div id="myFirstTabs" class="tabbed">
+
+				    <a id="tab-blue" class="tab" href="#blue">Blue Tab</a>
+				    <a id="tab-red" class="tab" href="#red">Red Tab</a>
+				
+				    <div id="panel-blue" class="panel">This is the blue panel</div>
+				    <div id="panel-red" class="panel"> This is my red panel</div>
+				
+				</div>
 				
 			</section>
 			
-			<!-- Canopy Example Section -->
+			<!-- Slideshow Example Section -->
 			<section>
 				
-				<h3>Canopy <a class="button button-primary button-mini" href="https://github.com/maxatbrs/JiveJS/wiki/Canopy" target="_blank">Docs</a> </h3>
-				<p>Simple, reusable overlay<br/><br/> 
-					<a class="button" onclick="$j.canopy.display()">Show Canopy</a>
-				</p>
+				<h2>Slideshow <a class="button button-primary button-mini"  href="https://github.com/maxatbrs/JiveJS/wiki/Slideshow" target="_blank">Docs</a> </h2>
+				
+				<p>Making a slideshow is super easy</p>
+				
+				<div id="testSlideShow" data-autostart="true" data-duration="4200" class="slideshow">
+				     
+					<img src="http://distilleryimage6.s3.amazonaws.com/dff872b4163811e2a953123138131424_7.jpg" class="slide" />
+					<img src="http://distilleryimage2.s3.amazonaws.com/c446b9e8f38a11e18f4222000a1c9e1c_7.jpg" class="slide" />
+					<img src="http://distilleryimage5.s3.amazonaws.com/3e6b5e000c2611e2b60722000a1e952e_7.jpg" class="slide" />
+				          
+				</div> 
 				
 			</section>
 			
-			<!-- Modal Example Section -->
-			<section>	
 			
-				<h3>Modal <a class="button button-primary button-mini" href="https://github.com/maxatbrs/JiveJS/wiki/Modal" target="_blank">Docs</a> </h3>
-				<p>A modal box <br/><br/>
-					<a class="button" onclick="$j.modal.display({title:'You found the Modal Example',html:$('#modalExample')})">Show Modal</a>
-				</p>
+
+			<section>
+
+				<h2>Mean, Lean UI Machine</h2>
+				<p>Weighing in at a <i>mere 18kb</i>, Jive will be one of the smallest dependencies on your page. It is built ontop of the 
+				popular JS framework, jQuery v2.1.x</p>
+	
+				<h2>White Label UI </h2>
 				
-				<!-- This gets appended to the modal -->
-				<div id="modalExample" style="display: none;">
+				<p>Unlike other UI libraries like Bootstrap, Jive is a white label UI framework meaning <i>that it has no aesthetic styling</i>. 
+				Buttons, menus, and other UI components only have the barebones stylings. The rest of it is up to you. If there's one 
+				thing we've learned: designers are pretty picky people so we give them complete creative freedom by having no hand
+				in design choices.</p>
+	
+				<h2>JiveJS was built to make things easy</h2>
 				
-					<h3>Congratulations, you're modalin</h3>
+				<p>Developers always need common UI components such tabbed interfaces, overlays, and slideshows. There have been 
+					<a target="_blank" href="http://goo.gl/hCGRO">alot of attempts</a> to solve this problem. Everytime we went with one toolkit over another, 
+					we always had to hack it to pieces to work <i>within the scope of design</i> or write a lot of javscript hooks to make function.
+					We were sick of it and said: damnit, can't we just write HTML and let JS do the rest? </p>
 					
-					<p>Modals are super easy to make. Take a look at the source for an example.</p>
+				<h2>The Goal: simple to learn but powerful under the hood</h2>
 				
-				</div>	
-				
+				<p>Since Jive is essentially a "HTML markup framework for UI component delegation" (oh god), it means that anyone who knows a little
+					HTML can get busy, quick. Dig deeper and you will find a highly organized, object oriented approach to Javascript that makes
+					jQuery plugins look like old punch-card code. While thing is library is built ontop of jQuery, we've taken a different approach
+					towards UI component development.</p>
+					
+				<h2>They See Me Trackin', They Be Hatin'</h2>
+				<p> We use Pivotal Tracker to maintain the project. <a href="https://www.pivotaltracker.com/s/projects/540025" target="_blank">Check it out here</a></p>
+	
+				<h2>Compatibility</h2>
+				<p>Firefox Current / Chrome Current / IE9+</p>
+	
 			</section>
+			
+			
 	
 		</div>
 		
