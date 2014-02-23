@@ -137,10 +137,10 @@
 }
 
 /*
- * JiveJS: Messages
+ * Messenger
  */
 
-#jive-messenger {
+#Messenger {
 	position: fixed;
 	top: 0;
 	right:0 ;
@@ -148,16 +148,7 @@
 	z-index: 100;
 }
 
-#jive-messenger-close {
-	position: absolute;
-	right: 0rem;
-	top:0;
-	padding:1rem;
-	color: #fff;
-	cursor: pointer;
-}
-
-.jive-msg {
+.message {
 	padding: 1rem;
 	text-align:center;
 	background: rgb(34, 179, 176);
@@ -165,21 +156,23 @@
 	border-bottom:1px solid #FFF;
 }
 
-.jive-msg-failure {
+.message-close {
+	cursor:pointer;
+	border:1px solid #FFF;
+	border-radius:50%;
+	margin:1rem;
+	padding: 0.25rem 0.5rem;
+	font-size:75%;
+}
+
+.message-failure {
 	background: #F7464A;
 }
 
-.jive-msg-warning {
+.message-warning {
 	background: #FFC83C;
 }
 
-.jive-msg-success {
+.message-success {
 	background:rgba(119, 196, 21, 1);
-}
-
-/* JiveJS: Dragging */
-
-.drag {
-	cursor: move;
-	user-select: none;
 }

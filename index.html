@@ -14,10 +14,10 @@
         <!-- Jquery 2.x -->
         <script type="text/javascript" src="jquery-2.1.0.min.js"></script>
        
-        <!-- Minified Jive -->
-        <script type="text/javascript" src="jive.min.js?20140222"></script>
+        <!-- Minified Jive 
+        <script type="text/javascript" src="jive.min.js?20140222"></script>-->
       	
-      	<!-- Development Includes (uncomment these for dev) 
+      	<!-- Development Includes (uncomment these for dev) -->
       	<script type="text/javascript" src="lib/jive.js"></script>
       	<script type="text/javascript" src="lib/oop.js"></script>
       	<script type="text/javascript" src="lib/canopy.js"></script>
@@ -26,14 +26,16 @@
       	<script type="text/javascript" src="lib/tabs.js"></script>
       	<script type="text/javascript" src="lib/slideshow.js"></script>
       	<script type="text/javascript" src="lib/dropdown.js"></script>
-      	<script type="text/javascript" src="lib/msg.js"></script>
-      	<script type="text/javascript" src="lib/form.js"></script>-->
+      	<script type="text/javascript" src="lib/Messenger.js"></script>
+      	<script type="text/javascript" src="lib/form.js"></script>
       			
         <!-- Jive CSS -->
         <link rel="stylesheet" type="text/css" href="jive.css?20140222" />
        
    		<!-- Styles for this Page -->
         <link rel="stylesheet" type="text/css" href="index.css?20140222" />
+        
+         <link rel="stylesheet" type="text/css" href="cardinal.css" />
         
         <!-- GA -->
         <script>
@@ -51,31 +53,26 @@
 	 
 	<body>
 		
-		<nav id="primary">
 	
-			<a>JiveJS</a>
+		<p id="titleBar">JiveJS // web ui made simple</p>
 			
-		</nav>
-		
+	
 		<div id="contentContainer">
-					
-		
-			<section>
 				
-				<h1>Use standard HTML &amp; CSS practices to create rich UI components <span>without 
+			<h1>Use standard HTML &amp; CSS practices to create rich UI components <span>without 
 				writing a single line of Javascript.</span> Dig deeper and find a rock solid, object oriented UI 
-				interface with all the tools you need.
-				
-				<a class="button" href="https://github.com/maxatbrs/JiveJS" target="_blank">
-					Download JiveJS v0.2
-				</a>
-				
-				<a class="button" href="https://github.com/maxatbrs/JiveJS/wiki" target="_blank">
-					Read the Docs
-				</a>
-				
-				</h1>
-				
+				interface with all the tools you need.</h1>
+			
+			<a class="button button-primary button-block one-whole" href="https://github.com/maxatbrs/JiveJS" target="_blank">
+				Download JiveJS v0.2
+			</a>
+			
+			<a class="button button-block one-whole" href="https://github.com/maxatbrs/JiveJS/wiki" target="_blank">
+				Read the Docs
+			</a>
+
+			<section>
+
 				<h2>Mean, Lean UI Machine</h2>
 				<p>Weighing in at a <i>mere 20kb</i>, Jive will be one of the smallest dependencies on your page. It is built ontop of the 
 				popular JS framework, jQuery v2.1.x</p>
@@ -109,13 +106,14 @@
 	
 			</section>
 			
+			<h2>Features</h2>
+				
+			<p>Here's a quick demo of some feautes JiveJS has. Take a look at the source if you're interested.</p>
+			
+			<!-- Tabs Example Section -->
 			<section>
 				
-				<h2>Features</h2>
-				
-				<p>Here's a quick demo of some feautes JiveJS has. Take a look at the source if you're interested.</p>
-				
-				<h3>Tabs | <a href="https://github.com/maxatbrs/JiveJS/wiki/Tabbed-UI" target="_blank">Docs</a> </h3>
+				<h3>Tabs <a class="button button-primary button-mini" href="https://github.com/maxatbrs/JiveJS/wiki/Tabbed-UI" target="_blank">Docs</a> </h3>
 				
 				<p>Tabbed content that has browser hash support. Try clicking on tabs then playing with the hash in the URL</p>
 				
@@ -129,7 +127,12 @@
 				
 				</div>
 				
-				<h3>Slideshow | <a href="https://github.com/maxatbrs/JiveJS/wiki/Slideshow" target="_blank">Docs</a> </h3>
+			</section>
+			
+			<!-- Slideshow Example Section -->
+			<section>
+				
+				<h3>Slideshow <a class="button button-primary button-mini"  href="https://github.com/maxatbrs/JiveJS/wiki/Slideshow" target="_blank">Docs</a> </h3>
 				
 				<p>Making a slideshow is super easy</p>
 				
@@ -141,16 +144,21 @@
 				          
 				</div> 
 				
-				<h3>JiveForm | <a href="https://github.com/maxatbrs/JiveJS/wiki/JiveForm" target="_blank">Docs</a> </h3>
+			</section>
+			
+			<!-- JiveForm Example Section -->
+			<section>
+				
+				<h3>JiveForm <a class="button button-primary button-mini" href="https://github.com/maxatbrs/JiveJS/wiki/JiveForm" target="_blank">Docs</a> </h3>
 				
 				<p>Validated, intelligent forms with just some HTML</p>
 				
 				<form id="loginForm" name="loginForm" class="jive-form" action="log_me_in.php">
 
-				    Email: <input type="text" name="email" data-validate="email" required/><br/>
-				    First Name: <input type="text" name="firstName" data-validate="alpha" required/><br/>
+				   <input placeholder="Email Address" type="text" name="email" data-validate="email" required/><br/>
+				   <input placeholder="First Name" type="text" name="firstName" data-validate="alpha" required/><br/>
 				
-				    <input type="submit" name="myform-submit" value="Login" />
+				    <input class="button" type="submit" name="myform-submit" value="Login" />
 					
 				</form>
 				
@@ -176,7 +184,7 @@
 								// show error
 								 $j.msg({
 								 	type:"failure",
-								 	content: $(this).attr("name") + " field doesn't validate"
+								 	content: $(this).attr("placeholder") + " field doesn't validate"
 								 });
 						    
 						 	});
@@ -188,22 +196,63 @@
 					
 				</script>
 				
-				<h3>Messenger | <a href="https://github.com/maxatbrs/JiveJS/wiki/Messenger" target="_blank">Docs</a> </h3>
+			</section>
+			
+			<!-- Dropdown Example Section -->
+			<section>
 				
-				<p>Notification UI component | 
-					<a onclick='$j.msg({content:"Ding ding, this is a notification!"});'>Info</a> |
-					<a onclick='$j.msg({type:"success",content:"This is a success!"});'>Success</a> |
-					<a onclick='$j.msg({type:"warning",content:"Time to get your attention!"});'>Warning</a> |
-					<a onclick='$j.msg({type:"failure",content:"Something went wrong!"});'>Failure</a> 
+				<h3>Dropdown Menu <a class="button button-primary button-mini" href="https://github.com/maxatbrs/JiveJS/wiki/Dropdowns" target="_blank">Docs</a></h3>
+				
+				<p>Dropdowns like it's hot:</p> 
+			
+				<div id="myDropdown" class="dropdown">
+	
+				    <span>Main Menu</span>
+				
+				    <div class="dropdown-menu" style="display:none;">
+				        <a href="#">Nav Item 1</a>
+				        <a href="#">Nav Item 2</a>
+				        <a href="#">Nav Item 3</a>
+				    </div>  
+				
+				</div>
+				
+			</section>
+			
+			
+			<!-- Messenger Example Section -->
+			<section>
+				
+				<h3>Messenger <a class="button button-primary button-mini" href="https://github.com/maxatbrs/JiveJS/wiki/Messenger" target="_blank">Docs</a> </h3>
+				
+				<p>A customizable notification UI component. Try it out:<br/><br/>
+					
+					<a class="button" onclick='$j.msg({content:"Ding ding, this is a notification!"});'>Info</a> 
+					<a class="button" onclick='$j.msg({type:"success",content:"This is a success!"});'>Success</a> 
+					<a class="button" onclick='$j.msg({type:"warning",content:"Time to get your attention!"});'>Warning</a> 
+					<a class="button" onclick='$j.msg({type:"failure",content:"Something went wrong!"});'>Failure</a> 
+					<a class="button" onclick='$j.msg({content:"This is a sticky notification!",sticky:true});'>Sticky</a>
+					
 				</p>
 				
-				<h3>Canopy | <a href="https://github.com/maxatbrs/JiveJS/wiki/Canopy" target="_blank">Docs</a> </h3>
-				<p>Simple, reusable overlay | <a onclick="$j.canopy.display()">Show Canopy</a> </p>
+			</section>
+			
+			<!-- Canopy Example Section -->
+			<section>
 				
+				<h3>Canopy <a class="button button-primary button-mini" href="https://github.com/maxatbrs/JiveJS/wiki/Canopy" target="_blank">Docs</a> </h3>
+				<p>Simple, reusable overlay<br/><br/> 
+					<a class="button" onclick="$j.canopy.display()">Show Canopy</a>
+				</p>
 				
-				<h3>Modal | <a href="https://github.com/maxatbrs/JiveJS/wiki/Modal" target="_blank">Docs</a> </h3>
-				<p>A modal box | 
-					<a onclick="$j.modal.display({title:'You found the Modal Example',html:$('#modalExample')})">Show Modal</a>
+			</section>
+			
+			<!-- Modal Example Section -->
+			<section>	
+			
+				<h3>Modal <a class="button button-primary button-mini" href="https://github.com/maxatbrs/JiveJS/wiki/Modal" target="_blank">Docs</a> </h3>
+				<p>A modal box <br/><br/>
+					<a class="button" onclick="$j.modal.display({title:'You found the Modal Example',html:$('#modalExample')})">Show Modal</a>
 				</p>
 				
 				<!-- This gets appended to the modal -->
