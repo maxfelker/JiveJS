@@ -156,15 +156,6 @@
 	border-bottom:1px solid #FFF;
 }
 
-.message-close {
-	cursor:pointer;
-	border:1px solid #FFF;
-	border-radius:50%;
-	margin:1rem;
-	padding: 0.25rem 0.5rem;
-	font-size:75%;
-}
-
 .message-failure {
 	background: #F7464A;
 }
