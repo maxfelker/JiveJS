@@ -54,6 +54,11 @@ i {
 	color:#39c;
 }
 
+section.grid-item { 
+	padding-left:0;
+	padding-right:2rem;
+}
+
 #contentContainer {
 	padding:2rem 3rem;
 	margin:0 auto;
@@ -61,8 +66,8 @@ i {
 
 #titleBar {
 	padding:1rem;
-	color:#FFF;
-	background:#F7464A;
+	color:#666;
+	border-bottom:1px solid #3eb0ef;
 }
 
 
@@ -97,8 +102,8 @@ section p .button  {
 
 div#testSlideShow,
 div#testSlideShow .slide {
-	height:300px;
-	width:300px;
+	height:200px;
+	width:200px;
 	margin-bottom:2rem;
 }
 

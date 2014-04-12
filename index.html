@@ -18,10 +18,10 @@
         <!-- Jquery 2.x -->
         <script type="text/javascript" src="jquery-2.1.0.min.js"></script>
        
-        <!-- Minified Jive -->
-        <script type="text/javascript" src="jive.min.js?20140222"></script>
+        <!-- Minified Jive 
+        <script type="text/javascript" src="jive.min.js?20140222"></script>-->
       	
-      	<!-- Development Includes (uncomment these for dev) 
+      	<!-- Development Includes (uncomment these for dev) -->
       	<script type="text/javascript" src="lib/jive.js"></script>
       	<script type="text/javascript" src="lib/oop.js"></script>
       	<script type="text/javascript" src="lib/canopy.js"></script>
@@ -30,7 +30,7 @@
       	<script type="text/javascript" src="lib/tabs.js"></script>
       	<script type="text/javascript" src="lib/slideshow.js"></script>
       	<script type="text/javascript" src="lib/Messenger.js"></script>
-      	<script type="text/javascript" src="lib/form.js"></script>-->
+      	<script type="text/javascript" src="lib/form.js"></script>
       			
         <!-- Jive CSS -->
         <link rel="stylesheet" type="text/css" href="jive.css?20140222" />
@@ -58,22 +58,40 @@
 		
 		<p id="titleBar">JiveJS // web ui made simple</p>
 	
-		<div id="contentContainer">
+		<div id="contentContainer" class="grid">
 				
-			<h1 id="missionStatement">Write simple HTML structures and create rich UI components <span>without 
-				writing a single line of Javascript.</span> Dig deeper and find a rock solid, object oriented UI 
-				interface with all the tools you need.</h1>
+					
+			<h1 id="missionStatement">
+				<span>Create rich UI components by writing simple HTML structures</span>. 
+				Dig deeper and find a rock solid, object oriented UI interface with all the tools you need.
+			</h1>
+				
 			
-			<a class="button button-primary button-block one-whole" href="https://github.com/maxatbrs/JiveJS" target="_blank">
-				Download JiveJS v0.3.2
-			</a>
 			
-			<a class="button button-block one-whole" href="https://github.com/maxatbrs/JiveJS/wiki" target="_blank">
-				Read the Docs
-			</a>
+			<div class="grid">	
+			
+		
+				<div class="grid-item one-whole medium-one-whole large-one-half">
+					
+					<a class="button button-primary button-block one-whole" href="https://github.com/maxatbrs/JiveJS" target="_blank">
+						Download JiveJS v0.3.2
+					</a>
+					
+				</div>
+				
+				<div class="grid-item one-whole medium-one-whole large-one-half">
+				
+					<a class="button button-block one-whole" href="https://github.com/maxatbrs/JiveJS/wiki" target="_blank">
+						Read the Docs
+					</a>
+				
+				</div>
+				
+			
+			</div>
 
 			<!-- Messenger Example Section -->
-			<section>
+			<section class="grid-item one-whole medium-one-whole large-one-half" class="grid-item one-whole medium-one-whole large-one-half">
 				
 				<h2>Messenger <a class="button button-primary button-mini" href="https://github.com/maxatbrs/JiveJS/wiki/Messenger" target="_blank">Docs</a> </h2>
 				
@@ -90,7 +108,7 @@
 			</section>
 			
 			<!-- Canopy Example Section -->
-			<section>
+			<section class="grid-item one-whole medium-one-whole large-one-half" class="grid-item one-whole medium-one-whole large-one-half">
 				
 				<h2>Canopy <a class="button button-primary button-mini" href="https://github.com/maxatbrs/JiveJS/wiki/Canopy" target="_blank">Docs</a> </h2>
 				<p>Simple, reusable overlay<br/><br/> 
@@ -100,7 +118,7 @@
 			</section>
 			
 			<!-- Modal Example Section -->
-			<section>	
+			<section class="grid-item one-whole medium-one-whole large-one-half" class="grid-item one-whole medium-one-whole large-one-half">	
 			
 				<h2>Modal <a class="button button-primary button-mini" href="https://github.com/maxatbrs/JiveJS/wiki/Modal" target="_blank">Docs</a> </h2>
 				<p>A modal box <br/><br/>
@@ -118,12 +136,33 @@
 				
 			</section>
 			
-			<!-- JiveForm Example Section -->
-			<section>
+			
+			
+			<!-- Tabs Example Section -->
+			<section class="grid-item one-whole medium-one-whole large-one-half" class="grid-item one-whole medium-one-whole large-one-half">
 				
-				<h2>JiveForm <a class="button button-primary button-mini" href="https://github.com/maxatbrs/JiveJS/wiki/JiveForm" target="_blank">Docs</a> </h2>
+				<h2>Tabs <a class="button button-primary button-mini" href="https://github.com/maxatbrs/JiveJS/wiki/Tabbed-UI" target="_blank">Docs</a> </h2>
 				
-				<p>Validated, intelligent forms with just some HTML</p>
+				<p>Tabbed content that has browser hash support. Try clicking on tabs then playing with the hash in the URL</p>
+				
+				<div id="myFirstTabs" class="tabbed">
+
+				    <a id="tab-blue" class="tab" href="#blue">Blue Tab</a>
+				    <a id="tab-red" class="tab" href="#red">Red Tab</a>
+				
+				    <div id="panel-blue" class="panel">This is the blue panel</div>
+				    <div id="panel-red" class="panel"> This is my red panel</div>
+				
+				</div>
+				
+			</section>
+			
+			<!-- FormObject Example Section -->
+			<section class="grid-item one-whole medium-one-whole large-one-half" class="grid-item one-whole medium-one-whole large-one-half">
+				
+				<h2>FormObject <a class="button button-primary button-mini" href="https://github.com/maxatbrs/JiveJS/wiki/JiveForm" target="_blank">Docs</a> </h2>
+				
+				<p id="output">Validated, intelligent forms with just some HTML</p>
 				
 				<form id="loginForm" name="loginForm" class="jive-form" action="log_me_in.php">
 
@@ -131,7 +170,7 @@
 				   <input placeholder="First Name" type="text" name="firstName" data-validate="alpha" required/><br/>
 				
 				    <input class="button" type="submit" name="myform-submit" value="Login" />
-					
+				   					
 				</form>
 				
 				<!-- JiveForm Javascript Example -->
@@ -141,9 +180,15 @@
 						
 						// When the form validates
 						$j.forms.loginForm.success(function(form) {
-						    
+							
 						    // Show a success message
-						   $j.msg({type:"success",content:"Nice, form is ready to do something"});
+							$j.msg({
+								type:"success",
+								content:"The form validated and you're ready to send data somewhere"
+							});
+							
+							// Update the page to show form.data, the object that you can send via AJAX when making calls
+							$("#output").html("You can now pass the <i>data</i> property of this form to an AJAX call, check it out: "+ JSON.stringify(form.data) );
 						
 						});
 						
@@ -170,27 +215,8 @@
 				
 			</section>
 			
-			<!-- Tabs Example Section -->
-			<section>
-				
-				<h2>Tabs <a class="button button-primary button-mini" href="https://github.com/maxatbrs/JiveJS/wiki/Tabbed-UI" target="_blank">Docs</a> </h2>
-				
-				<p>Tabbed content that has browser hash support. Try clicking on tabs then playing with the hash in the URL</p>
-				
-				<div id="myFirstTabs" class="tabbed">
-
-				    <a id="tab-blue" class="tab" href="#blue">Blue Tab</a>
-				    <a id="tab-red" class="tab" href="#red">Red Tab</a>
-				
-				    <div id="panel-blue" class="panel">This is the blue panel</div>
-				    <div id="panel-red" class="panel"> This is my red panel</div>
-				
-				</div>
-				
-			</section>
-			
 			<!-- Slideshow Example Section -->
-			<section>
+			<section class="grid-item one-whole medium-one-whole large-one-half" class="grid-item one-whole medium-one-whole large-one-half">
 				
 				<h2>Slideshow <a class="button button-primary button-mini"  href="https://github.com/maxatbrs/JiveJS/wiki/Slideshow" target="_blank">Docs</a> </h2>
 				
@@ -206,20 +232,24 @@
 				
 			</section>
 			
-			
-
-			<section>
+			<section class="grid-item one-whole medium-one-whole large-one-half">
 
 				<h2>Mean, Lean UI Machine</h2>
-				<p>Weighing in at a <i>mere 18kb</i>, Jive will be one of the smallest dependencies on your page. It is built ontop of the 
+				<p>Weighing in at a <i>mere 17kb</i>, Jive will be one of the smallest dependencies on your page. It is built ontop of the 
 				popular JS framework, jQuery v2.1.x</p>
+				
+			</section>
+				
+			<section class="grid-item one-whole medium-one-whole large-one-half">
 	
 				<h2>White Label UI </h2>
 				
 				<p>Unlike other UI libraries like Bootstrap, Jive is a white label UI framework meaning <i>that it has no aesthetic styling</i>. 
-				Buttons, menus, and other UI components only have the barebones stylings. The rest of it is up to you. If there's one 
-				thing we've learned: designers are pretty picky people so we give them complete creative freedom by having no hand
-				in design choices.</p>
+				UI components only have the barebones stylings. The rest of it is up to you. </p>
+				
+			</section>
+				
+			<section class="grid-item one-whole medium-one-whole large-one-half">
 	
 				<h2>JiveJS was built to make things easy</h2>
 				
@@ -228,15 +258,27 @@
 					we always had to hack it to pieces to work <i>within the scope of design</i> or write a lot of javscript hooks to make function.
 					We were sick of it and said: damnit, can't we just write HTML and let JS do the rest? </p>
 					
+			</section>
+					
+			<section class="grid-item one-whole medium-one-whole large-one-half">
+					
 				<h2>The Goal: simple to learn but powerful under the hood</h2>
 				
 				<p>Since Jive is essentially a "HTML markup framework for UI component delegation" (oh god), it means that anyone who knows a little
 					HTML can get busy, quick. Dig deeper and you will find a highly organized, object oriented approach to Javascript that makes
 					jQuery plugins look like old punch-card code. While thing is library is built ontop of jQuery, we've taken a different approach
 					towards UI component development.</p>
+			
+			</section>
+					
+			<section class="grid-item one-whole medium-one-whole large-one-half">
 					
 				<h2>They See Me Trackin', They Be Hatin'</h2>
 				<p> We use Pivotal Tracker to maintain the project. <a href="https://www.pivotaltracker.com/s/projects/540025" target="_blank">Check it out here</a></p>
+				
+			</section>
+				
+			<section class="grid-item one-whole medium-one-whole large-one-half">
 	
 				<h2>Compatibility</h2>
 				<p>Firefox Current / Chrome Current / IE9+</p>
@@ -249,6 +291,7 @@
 		
 		<footer>
 			
+			<a href="http://cardinalcss.com" target="_blank">Mobile Friendly w/ Cardinal</a> -
 			<a href="https://github.com/maxatbrs/JiveJS/" target="_blank">GitHub</a> -
 			<a href="https://www.pivotaltracker.com/s/projects/540025" target="_blank">Pivotal</a> -
 			by <a href="http://www.maxfelker.com"target="_blank" >Max Felker</a>
